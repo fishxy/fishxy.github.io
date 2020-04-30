@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thinking on 一起摸鱼</title>
+    <link>https://fishw.xyz/tags/thinking/</link>
+    <description>Recent content in thinking on 一起摸鱼</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fishw.xyz/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0528-胡言乱语</title>
+      <link>https://fishw.xyz/post/diary/0528-%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fishw.xyz/post/diary/0528-%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/</guid>
+      <description>关于制定方案 如何决策 Q1：根据什么来决策？ A1：将简述题转化为选择题，决策的最终目标是形成一定结论、方案，那么既然是这样，就可以将问题转化为</description>
+    </item>
+    
+  </channel>
+</rss>
