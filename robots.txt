@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://fishw.xyz/sitemap.xml
+Sitemap: https://fishxy.github.io/sitemap.xml
