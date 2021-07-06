@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>一起摸鱼</title><link>https://fishxy.github.io/</link><description>Recent content on 一起摸鱼</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fishxy.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2021-07-02 闲谈</title><link>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</guid><description>&lt;h1 id="工作">工作&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>一起摸鱼</title><link>https://fishxy.github.io/</link><description>Recent content on 一起摸鱼</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fishxy.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2021-07-06 闲谈</title><link>https://fishxy.github.io/post/diary/2021-07-06%E9%97%B2%E8%B0%88/</link><pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2021-07-06%E9%97%B2%E8%B0%88/</guid><description>&lt;p>跟 z 公司聊完了，因为是去年就聊过的岗位，而且也是去年的面试官，所以就聊了聊天，聊了聊现在产品线的变化，现在做的事情，关于能力方面也没有再聊什么。我也因为其实都已经了解了不少，所以就介绍了现在的情况，现在做的事以及我的顾虑，为什么我现在不能离开以及预期离开的时间。面试官也没有说什么，可以在年底的时候再去谈，我也动摇了，可能真的到年底的时候我会选择离开吧。&lt;/p>
+&lt;p>昨天和 CEO 又对了一下需求，对的我头皮发麻，总是纠结于小问题，比如说交互，搜索条件什么的这种问题，心累。&lt;/p>
+&lt;p>碎碎念，写下来吧。&lt;/p></description></item><item><title>2021-07-02 闲谈</title><link>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</guid><description>&lt;h1 id="工作">工作&lt;/h1>
 &lt;h2 id="出差">出差&lt;/h2>
 &lt;p>最近公司的业务下滑，各方面都有问题，但都不是单点的问题造成的，CEO 觉得产品离业务太远，给了我老板很多压力，我也没有什么理由能够说服自己或者说服我朋友让我不去出差，但是我确实个人情绪上不是很情愿，毕竟积累的关系和生活都在北京，让我常驻，我还有很难受的，不像是刚毕业的时候，让我出差我激动得不行，现在感觉迁移成本太大了，牺牲自己的生活品质和自由时间。
 但是我确实没得选，我朋友也很难。
@@ -603,15 +605,4 @@ $$&lt;/p>
 &lt;h1 id="关于产品升级">关于产品升级&lt;/h1>
 &lt;p>平台级产品，在于提供服务，提供能力，向外延伸，赋能给合作伙伴、接入平台的一方，对于升级功能时，通知很重要。&lt;/p>
 &lt;p>一旦删除或是不再支持某一功能、接口，要系统考虑好后续的连锁反应，为确保不会影响接入的一方，要尽量平滑过渡，比如一个api的删除，可以先删除掉实现逻辑，不要直接把接口删除，容易引起未来的及修改一方的产品质量，可以制定一个策略，通知到具体在一段时间后(某一时间点)，不再支持这个api、功能，请用户注意升级，然后再进行删除。&lt;/p>
-&lt;p>以上只是两个小case，需要注意的是，平台产品的多利益方协作间，需要强有力的推动能力、推动事情持续运转，以及推广时的服务、通知意识，确保信息触达到所有相关人员。&lt;/p></description></item><item><title>0514-NFC支付为什么没有二维码普及</title><link>https://fishxy.github.io/post/diary/nfc%E6%94%AF%E4%BB%98/</link><pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/nfc%E6%94%AF%E4%BB%98/</guid><description>&lt;p>&lt;img src="https://fishw.xyz/blogdata/img/20190516202913.png" alt="同事给我分享的新闻">&lt;/p>
-&lt;p>今天同事给我分享了一个新闻。苹果发布了一个用于apple pay的NFC贴纸，只要用户把手机贴近贴纸就能完成。NFC配对支付。苹果计划在线下推广这个服务供用户使用。作为苹果粉的同事当然很激动。然后我说但是现在有二维码支付了呀，我感觉这个东西推广起来比较难。同事给我讲了他的看法，他觉得NFC支付要比二维码支付很方便，因为只要靠近一下就可以了，但是二维码你需要把摄像头再打开，然后或者是支付方把二维码打开，双方互相扫才能完成支付动作。他举了一个最常见的例子——就是地铁扫码支付，在临出地铁的时候，有的人可能是网络问题或是其他原因，导致二维码还没打开、加载不出来，但是你用NFC的用户，只要把手机贴上去就可以了。&lt;/p>
-&lt;p>我在想的问题是，NFC支付确实很方便，操作体验更好，但是为什么还是没有二维码更普及呢？&lt;/p>
-&lt;p>首先我觉得第一点，就是这个智能手机设备问题，虽然说现在智能手机很普遍，但是问题是NFC并不是每一个智能手机都配备的功能，对于一些低端机市场，就没有NFC功能。但是相反，摄像头和二维码，这个每台智能手机都配备的基础功能，而且只要网络顺畅，二维码支付也是很方便就可以实现的。&lt;/p>
-&lt;p>第二点是，尽管有些智能手机也是配有NFC支付功能，但是目前各家厂商的NFC支付标准不同，这导致在适配上也会提高成本，而二维码的规范和标准就相对统一。&lt;/p>
-&lt;p>另外还有一点就是，支付是买方卖方双方完成的事项，如果要推广NFC支付的话，在商户端、收款方也要进行大规模的普及，这可能是这其中最困难的一点。&lt;/p>
-&lt;p>但实际上来说我还是很赞同同事的观点，我现在平常也在用NFC乘公共交通，NFC在响应速度和操作便利性来说要比二维码方便多了，而且相对也会更安全。如果NFC能够普及开，相信也能大幅提高用户的消费体验。&lt;/p>
-&lt;p>&lt;code>下面就是胡扯了，我在想NFC怎么能低成本的普及开呢？&lt;/code>&lt;/p>
-&lt;p>小米应该是最先做NFC支付的，他选择的方式是从居民常用的公共交通进行切入，利用miui系统进行推广，同时进行一些免开卡费进行拉新，我不太清楚他会有什么盈利方式，但是这不乏是一个很好的切入方式，选择一个生活中十分高频的场景带动NFC支付。&lt;/p>
-&lt;p>那如果说，目前新零售上能否用上这套模式呢？京东、苏宁、天猫小店进行NFC设备的配备，我想目前主要的难点还是在于配对成本要比二维码高太多了，ROI太低可能是阻碍NFC普及的最大阻力。&lt;/p>
-&lt;p>所以目前可见的，用户智能机的NFC都使用在了——替代某一类生活场景中已有NFC使用的产品，比如公交卡、门禁卡等等。&lt;/p>
-&lt;p>暂时想不到更好的方式。&lt;/p></description></item></channel></rss>
+&lt;p>以上只是两个小case，需要注意的是，平台产品的多利益方协作间，需要强有力的推动能力、推动事情持续运转，以及推广时的服务、通知意识，确保信息触达到所有相关人员。&lt;/p></description></item></channel></rss>
