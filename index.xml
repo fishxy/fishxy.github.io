@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>一起摸鱼</title><link>https://fishxy.github.io/</link><description>Recent content on 一起摸鱼</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fishxy.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2021-07-06 闲谈</title><link>https://fishxy.github.io/post/diary/2021-07-06%E9%97%B2%E8%B0%88/</link><pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2021-07-06%E9%97%B2%E8%B0%88/</guid><description>&lt;p>跟 z 公司聊完了，因为是去年就聊过的岗位，而且也是去年的面试官，所以就聊了聊天，聊了聊现在产品线的变化，现在做的事情，关于能力方面也没有再聊什么。我也因为其实都已经了解了不少，所以就介绍了现在的情况，现在做的事以及我的顾虑，为什么我现在不能离开以及预期离开的时间。面试官也没有说什么，可以在年底的时候再去谈，我也动摇了，可能真的到年底的时候我会选择离开吧。&lt;/p>
 &lt;p>昨天和 CEO 又对了一下需求，对的我头皮发麻，总是纠结于小问题，比如说交互，搜索条件什么的这种问题，心累。&lt;/p>
-&lt;p>碎碎念，写下来吧。&lt;/p>
-&lt;p>2021年7月21日 update&lt;/p></description></item><item><title>2021-07-02 闲谈</title><link>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</guid><description>&lt;h1 id="工作">工作&lt;/h1>
+&lt;p>碎碎念，写下来吧。&lt;/p></description></item><item><title>2021-07-02 闲谈</title><link>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2021-07-02%E9%97%B2%E8%B0%88/</guid><description>&lt;h1 id="工作">工作&lt;/h1>
 &lt;h2 id="出差">出差&lt;/h2>
 &lt;p>最近公司的业务下滑，各方面都有问题，但都不是单点的问题造成的，CEO 觉得产品离业务太远，给了我老板很多压力，我也没有什么理由能够说服自己或者说服我朋友让我不去出差，但是我确实个人情绪上不是很情愿，毕竟积累的关系和生活都在北京，让我常驻，我还有很难受的，不像是刚毕业的时候，让我出差我激动得不行，现在感觉迁移成本太大了，牺牲自己的生活品质和自由时间。
 但是我确实没得选，我朋友也很难。
@@ -417,13 +416,13 @@ $$&lt;/p>
 &lt;p>蓝牙连接比较方便，而且可以多设备配对切换，连接方式&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-fallback" data-lang="fallback">1.首先打开按住左侧电源键 1s 以上打开 niz 键盘，f12 的蓝牙电源等会有提示
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">1.首先打开按住左侧电源键 1s 以上打开 niz 键盘，f12 的蓝牙电源等会有提示
 2.按住 fn+f9~11 任意一个知道指示灯快闪进入配对模式
 3.连接设备上搜索设备 “Bluetooth keyboard”，点击连接会出现连接密码
 4.在键盘上输入对应连接密码，回车键，done！

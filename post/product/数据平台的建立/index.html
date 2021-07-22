@@ -1,22 +1,267 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>浅谈搭建统一数据平台 - 一起摸鱼</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=yes"><meta name=MobileOptimized content="width"><meta name=HandheldFriendly content="true"><meta name=applicable-device content="pc,mobile"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=mobile-web-app-capable content="yes"><meta name=author content="DY Wong"><meta name=description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><meta name=generator content="Hugo 0.85.0"><link rel=canonical href=https://fishxy.github.io/post/product/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BB%BA%E7%AB%8B/><link rel=icon href=/favicon.ico><link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous><link rel=stylesheet href=/css/custom.css><meta property="og:title" content="浅谈搭建统一数据平台"><meta property="og:description" content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><meta property="og:type" content="article"><meta property="og:url" content="https://fishxy.github.io/post/product/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BB%BA%E7%AB%8B/"><meta property="article:section" content="post"><meta property="article:published_time" content="2018-11-28T00:00:00+00:00"><meta property="article:modified_time" content="2018-11-28T00:00:00+00:00"><meta itemprop=name content="浅谈搭建统一数据平台"><meta itemprop=description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><meta itemprop=datePublished content="2018-11-28T00:00:00+00:00"><meta itemprop=dateModified content="2018-11-28T00:00:00+00:00"><meta itemprop=wordCount content="1393"><meta itemprop=keywords content="work,数据,"><meta name=twitter:card content="summary"><meta name=twitter:title content="浅谈搭建统一数据平台"><meta name=twitter:description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-136004904-1','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>一起摸鱼</a></div><div class=mobile-navbar-icon><span></span><span></span><span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><li class=mobile-menu-item><a class=menu-item-link href=https://fishxy.github.io/>Home</a></li><li class=mobile-menu-item><a class=menu-item-link href=https://fishxy.github.io/post/>Archives</a></li></ul></nav><link rel=stylesheet href=/lib/photoswipe/photoswipe.min.css><link rel=stylesheet href=/lib/photoswipe/default-skin/default-skin.min.css><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<title>浅谈搭建统一数据平台 - 一起摸鱼</title>
+<meta name=renderer content="webkit">
+<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=yes">
+<meta name=MobileOptimized content="width">
+<meta name=HandheldFriendly content="true">
+<meta name=applicable-device content="pc,mobile">
+<meta name=theme-color content="#f8f5ec">
+<meta name=msapplication-navbutton-color content="#f8f5ec">
+<meta name=apple-mobile-web-app-capable content="yes">
+<meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec">
+<meta name=mobile-web-app-capable content="yes">
+<meta name=author content="DY Wong">
+<meta name=description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题">
+<meta name=generator content="Hugo 0.86.0">
+<link rel=canonical href=https://fishxy.github.io/post/product/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BB%BA%E7%AB%8B/>
+<link rel=icon href=/favicon.ico>
+<link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous>
+<link rel=stylesheet href=/css/custom.css>
+<meta property="og:title" content="浅谈搭建统一数据平台">
+<meta property="og:description" content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fishxy.github.io/post/product/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BB%BA%E7%AB%8B/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2018-11-28T00:00:00+00:00">
+<meta property="article:modified_time" content="2018-11-28T00:00:00+00:00">
+<meta itemprop=name content="浅谈搭建统一数据平台">
+<meta itemprop=description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><meta itemprop=datePublished content="2018-11-28T00:00:00+00:00">
+<meta itemprop=dateModified content="2018-11-28T00:00:00+00:00">
+<meta itemprop=wordCount content="1393">
+<meta itemprop=keywords content="work,数据,"><meta name=twitter:card content="summary">
+<meta name=twitter:title content="浅谈搭建统一数据平台">
+<meta name=twitter:description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]-->
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-136004904-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body>
+<div id=mobile-navbar class=mobile-navbar>
+<div class=mobile-header-logo>
+<a href=/ class=logo>一起摸鱼</a>
+</div>
+<div class=mobile-navbar-icon>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<nav id=mobile-menu class="mobile-menu slideout-menu">
+<ul class=mobile-menu-list>
+<li class=mobile-menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/>Home</a>
+</li><li class=mobile-menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/post/>Archives</a>
+</li>
+</ul>
+</nav>
+<link rel=stylesheet href=/lib/photoswipe/photoswipe.min.css>
+<link rel=stylesheet href=/lib/photoswipe/default-skin/default-skin.min.css>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header id=header class="header container"><div class=logo-wrapper><a href=/ class=logo>一起摸鱼</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=https://fishxy.github.io/>Home</a></li><li class=menu-item><a class=menu-item-link href=https://fishxy.github.io/post/>Archives</a></li></ul></nav><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js></script></header><div id=mobile-panel><main id=main class="main bg-llight"><div class=content-wrapper><div id=content class="content container"><article class="post bg-white"><header class=post-header><h1 class=post-title>浅谈搭建统一数据平台</h1><div class=post-meta><time datetime=2018-11-28 class=post-time>2018-11-28</time><div class=post-category><a href=https://fishxy.github.io/categories/product/>Product</a></div><span class=more-meta>1393 words</span>
-<span class=more-meta>3 min read</span>
-<span id=busuanzi_container_page_pv>| 阅读 <span id=busuanzi_value_page_pv></span></span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Table of Contents</h2><div class=post-toc-content><nav id=TableOfContents></nav></div></div><div class=post-content><p>之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题。</p><p>数据平台主要是提供有关于数据报表的展示和拓展服务的。</p><p>那对于个人用户来说，常见的多是个人账号相关的数据，比如说你的社交网络数据——微博每月数据报告，会统计你的发博数量、获赞数量、粉丝互动等，或则说你的支付数据——支付宝的年度报告这一类似的数据统计，个人用户所看到的数据更多是作为用户方，对自己一段行为过程产生数据的总结。</p><p>那对于一般的企业用户来说，比如说我们ehr系统中会统计面试offer的通过数量，拒绝offer的原因统计，或者比如说OA中有关员工数据的统计，甚至还有BI这种专门为企业提供数据分析的系统软件，那对于企业来说，更多场景下是对一段经营后产生的数据经过整理分析，形成报告、得出结论，进而为（高层）下一步行动做决策。</p><p>我这里主要讲有关于企业、公司使用的数据平台的建立。</p><h1 id=建立统一数据平台的意义>建立统一数据平台的意义</h1><p>数据平台其实就是根据企业所需要的数据，按照一定的需求进行展示，比如财务的需要关于财务的数据报表，包括公司的盈利分析、亏损分析等等。</p><p>在实际过程中，企业往往使用着不止一个系统，而在每个系统中都会由各自独立的数据统计，如此一来，各部分数据相互割裂，无法联动，如果需要进行组合分析，还需要使用者反复切换，自行进行汇总操作。这样由于数据量大，不利于分析，制作成汇报所需的报表精力花费时间多，且各个部门对数据的需求不一样，无法进行个性化设置。</p><p>那建立统一数据平台就是将所有数据进行汇总，能够按照不同的个性化需求进行分析展示，提供使用方能够用于决策的数据报告等信息。</p><h1 id=建立过程和要点>建立过程和要点</h1><ul><li><p>数据整合，对多源多类型进行整合</p><p>这一阶段高质量的沟通很重要，因为主要是进行跨部门协作，我们在这一阶段需要确定数据来源和需要的数据指标，以及对我们的用户进行一个产品初期的介绍，能够为他们解决那些问题，为后期推广做一个良好的铺垫。</p></li><li><p>数据收集抓取、处理、核对、分析</p><p>对业务所需要的数据进行收集处理，可以根据个性化需求生成一些产品报告，把业务人员从采集、整理、处理数据中解放出来，集中精力进行深度研究，提供更优质的决策判断。</p><p>这一阶段在对数据采集完成后，会经历一个，用户使用和自己核对、发现问题、不断修正改进的过程，最终目标是能够提供给用户及时准确的数据。</p></li><li><p>小步快跑、快速迭代</p><p>正如前文所说，建立数据平台时，可以不断定一些目标、一些里程碑，和业务人员、leader等利益相关方推广分享，让他们参与使用和评价，收集反馈，当相关人员都有参与感时，数据平台才会持久不断的优化改善，朝着良好的方向发展。</p></li></ul><h1 id=提供的功能>提供的功能</h1><p>这块其实要讲的不是很多，对于提供的功能来说，主要有几个方面</p><ul><li>数据报表，直观的数据指标展示，不同的展示形式可以预先定义模板，也可以允许用户进行自定义</li><li>数据报警，可以是设置静态阈值类别的数据报警提醒，也可以是应用ai的报警机制，这方面我都尝试过，在实际上还是需要根据自己业务需要进行选择</li><li>定期日报、周报、月报功能，提供能够使用户进行自主配置报告功能</li><li>透视表</li><li>……</li></ul><h1 id=小结>小结</h1><p>这里主要想说的是，不管是某一系统内部的数据分析功能、或是聚合多源数据的统一数据平台，我们首先要明确的一方面是要达成的目标是什么，最终服务的用户以及需要解决他们那些问题；另一方面就是有关于数据本身，数据的抓取方案、展示形式以及数据的准确性和实时性。</p></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
-<span class=item-content>DY Wong</span></p><p class=copyright-item><span class=item-title>LastMod</span>
-<span class=item-content>2018-11-28</span></p><p class=copyright-item><span class=item-title>License</span>
-<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-nd/4.0/ target=_blank>CC BY-NC-ND 4.0</a></span></p></div><footer class=post-footer><div class=post-tags><a href=https://fishxy.github.io/tags/work/>work</a>
-<a href=https://fishxy.github.io/tags/%E6%95%B0%E6%8D%AE/>数据</a></div><div class=social-share data-sites=weibo,wechat,douban,twitter data-mobile-sites=weibo,wechat></div><nav class=post-nav><a class=prev href=/post/product/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%A4%8D%E7%9B%98/><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417l277.93508-310.326815c11.338233-12.190647 11.035334-32.285311-.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"/></svg></i><span class="prev-text nav-default">如何进行复盘</span>
-<span class="prev-text nav-mobile">Prev</span></a>
-<a class=next href=/post/product/%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1/><span class="next-text nav-default">工作流平台设计</span>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div>
+<header id=header class="header container">
+<div class=logo-wrapper>
+<a href=/ class=logo>
+一起摸鱼
+</a>
+</div>
+<nav class=site-navbar>
+<ul id=menu class=menu>
+<li class=menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/>Home</a>
+</li>
+<li class=menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/post/>Archives</a>
+</li>
+</ul>
+</nav>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js></script>
+</header>
+<div id=mobile-panel>
+<main id=main class="main bg-llight">
+<div class=content-wrapper>
+<div id=content class="content container">
+<article class="post bg-white">
+<header class=post-header>
+<h1 class=post-title>浅谈搭建统一数据平台</h1>
+<div class=post-meta>
+<time datetime=2018-11-28 class=post-time>
+2018-11-28
+</time>
+<div class=post-category>
+<a href=https://fishxy.github.io/categories/product/> Product </a>
+</div>
+<span class=more-meta> 1393 words </span>
+<span class=more-meta> 3 min read </span>
+<span id=busuanzi_container_page_pv>
+| 阅读 <span id=busuanzi_value_page_pv></span>
+</span>
+</div>
+</header>
+<div class=post-toc id=post-toc>
+<h2 class=post-toc-title>Table of Contents</h2>
+<div class=post-toc-content>
+<nav id=TableOfContents></nav>
+</div>
+</div>
+<div class=post-content>
+<p>之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题。</p>
+<p>数据平台主要是提供有关于数据报表的展示和拓展服务的。</p>
+<p>那对于个人用户来说，常见的多是个人账号相关的数据，比如说你的社交网络数据——微博每月数据报告，会统计你的发博数量、获赞数量、粉丝互动等，或则说你的支付数据——支付宝的年度报告这一类似的数据统计，个人用户所看到的数据更多是作为用户方，对自己一段行为过程产生数据的总结。</p>
+<p>那对于一般的企业用户来说，比如说我们ehr系统中会统计面试offer的通过数量，拒绝offer的原因统计，或者比如说OA中有关员工数据的统计，甚至还有BI这种专门为企业提供数据分析的系统软件，那对于企业来说，更多场景下是对一段经营后产生的数据经过整理分析，形成报告、得出结论，进而为（高层）下一步行动做决策。</p>
+<p>我这里主要讲有关于企业、公司使用的数据平台的建立。</p>
+<h1 id=建立统一数据平台的意义>建立统一数据平台的意义</h1>
+<p>数据平台其实就是根据企业所需要的数据，按照一定的需求进行展示，比如财务的需要关于财务的数据报表，包括公司的盈利分析、亏损分析等等。</p>
+<p>在实际过程中，企业往往使用着不止一个系统，而在每个系统中都会由各自独立的数据统计，如此一来，各部分数据相互割裂，无法联动，如果需要进行组合分析，还需要使用者反复切换，自行进行汇总操作。这样由于数据量大，不利于分析，制作成汇报所需的报表精力花费时间多，且各个部门对数据的需求不一样，无法进行个性化设置。</p>
+<p>那建立统一数据平台就是将所有数据进行汇总，能够按照不同的个性化需求进行分析展示，提供使用方能够用于决策的数据报告等信息。</p>
+<h1 id=建立过程和要点>建立过程和要点</h1>
+<ul>
+<li>
+<p>数据整合，对多源多类型进行整合</p>
+<p>这一阶段高质量的沟通很重要，因为主要是进行跨部门协作，我们在这一阶段需要确定数据来源和需要的数据指标，以及对我们的用户进行一个产品初期的介绍，能够为他们解决那些问题，为后期推广做一个良好的铺垫。</p>
+</li>
+<li>
+<p>数据收集抓取、处理、核对、分析</p>
+<p>对业务所需要的数据进行收集处理，可以根据个性化需求生成一些产品报告，把业务人员从采集、整理、处理数据中解放出来，集中精力进行深度研究，提供更优质的决策判断。</p>
+<p>这一阶段在对数据采集完成后，会经历一个，用户使用和自己核对、发现问题、不断修正改进的过程，最终目标是能够提供给用户及时准确的数据。</p>
+</li>
+<li>
+<p>小步快跑、快速迭代</p>
+<p>正如前文所说，建立数据平台时，可以不断定一些目标、一些里程碑，和业务人员、leader等利益相关方推广分享，让他们参与使用和评价，收集反馈，当相关人员都有参与感时，数据平台才会持久不断的优化改善，朝着良好的方向发展。</p>
+</li>
+</ul>
+<h1 id=提供的功能>提供的功能</h1>
+<p>这块其实要讲的不是很多，对于提供的功能来说，主要有几个方面</p>
+<ul>
+<li>数据报表，直观的数据指标展示，不同的展示形式可以预先定义模板，也可以允许用户进行自定义</li>
+<li>数据报警，可以是设置静态阈值类别的数据报警提醒，也可以是应用ai的报警机制，这方面我都尝试过，在实际上还是需要根据自己业务需要进行选择</li>
+<li>定期日报、周报、月报功能，提供能够使用户进行自主配置报告功能</li>
+<li>透视表</li>
+<li>……</li>
+</ul>
+<h1 id=小结>小结</h1>
+<p>这里主要想说的是，不管是某一系统内部的数据分析功能、或是聚合多源数据的统一数据平台，我们首先要明确的一方面是要达成的目标是什么，最终服务的用户以及需要解决他们那些问题；另一方面就是有关于数据本身，数据的抓取方案、展示形式以及数据的准确性和实时性。</p>
+</div>
+<div class=post-copyright>
+<p class=copyright-item>
+<span class=item-title>Author</span>
+<span class=item-content>DY Wong</span>
+</p>
+<p class=copyright-item>
+<span class=item-title>LastMod</span>
+<span class=item-content>
+2018-11-28
+</span>
+</p>
+<p class=copyright-item>
+<span class=item-title>License</span>
+<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-nd/4.0/ target=_blank>CC BY-NC-ND 4.0</a></span>
+</p>
+</div>
+<footer class=post-footer>
+<div class=post-tags>
+<a href=https://fishxy.github.io/tags/work/>work</a>
+<a href=https://fishxy.github.io/tags/%E6%95%B0%E6%8D%AE/>数据</a>
+</div>
+<div class=social-share data-sites=weibo,wechat,douban,twitter data-mobile-sites=weibo,wechat></div>
+<nav class=post-nav>
+<a class=prev href=/post/product/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%A4%8D%E7%9B%98/>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417l277.93508-310.326815c11.338233-12.190647 11.035334-32.285311-.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"/></svg>
+</i>
+<span class="prev-text nav-default">如何进行复盘</span>
+<span class="prev-text nav-mobile">Prev</span>
+</a>
+<a class=next href=/post/product/%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1/>
+<span class="next-text nav-default">工作流平台设计</span>
 <span class="prev-text nav-mobile">Next</span>
-<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697c-11.777231-11.500939-30.216186-10.304694-41.178865 2.712784z"/></svg></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=icon-links><a href=https://fishxy.github.io/index.xml rel="noopener alternate" type=application/rss+xml class=iconfont title=rss target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><path d="M819.157333 1024C819.157333 574.592 449.408 204.8.0 204.8V0c561.706667.0 1024 462.293333 1024 1024H819.157333zM140.416 743.04a140.8 140.8.0 01140.501333 140.586667A140.928 140.928.0 01140.074667 1024C62.72 1024 0 961.109333.0 883.626667S62.933333 743.082667 140.416 743.04zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667v-199.04c372.352.0 678.784 306.517333 678.784 678.826667z"/></svg></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697c-11.777231-11.500939-30.216186-10.304694-41.178865 2.712784z"/></svg>
+</i>
+</a>
+</nav>
+</footer>
+</article>
+</div>
+</div>
+</main>
+<footer id=footer class=footer>
+<div class=icon-links>
+<a href=https://fishxy.github.io/index.xml rel="noopener alternate" type=application/rss+xml class=iconfont title=rss target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><path d="M819.157333 1024C819.157333 574.592 449.408 204.8.0 204.8V0c561.706667.0 1024 462.293333 1024 1024H819.157333zM140.416 743.04a140.8 140.8.0 01140.501333 140.586667A140.928 140.928.0 01140.074667 1024C62.72 1024 0 961.109333.0 883.626667S62.933333 743.082667 140.416 743.04zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667v-199.04c372.352.0 678.784 306.517333 678.784 678.826667z"/></svg>
+</a>
+</div>
+<div class=copyright>
+<span class=power-by>
+Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a>
+</span>
 <span class=division>|</span>
-<span class=theme-info>Theme - <a class=theme-link href=https://github.com/xianmin/hugo-theme-jane>Jane</a></span>
-<span class=copyright-year>&copy;
+<span class=theme-info>
+Theme - <a class=theme-link href=https://github.com/xianmin/hugo-theme-jane>Jane</a>
+</span>
+<span class=copyright-year>
+&copy;
 2019 -
 2021
-<span class=heart><i class=iconfont><svg class="icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14"><path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7.0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1.0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2.0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3.1-42.5-8-83.6-24-122.2z" fill="#8a8a8a"/></svg></i></span><span class=author>DY Wong</span></span>
-<span id=busuanzi_container>访客数/访问量：<span id=busuanzi_value_site_uv></span>/<span id=busuanzi_value_site_pv></span></span></div></footer><div class=back-to-top id=back-to-top><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><path d="M510.866688 227.694839 95.449397 629.218702h235.761562L329.15309 958.01517h362.40389L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777h894.052392v131.813095H63.840492V63.962777zm0 0"/></svg></i></div></div><script type=text/javascript src=/lib/jquery/jquery-3.2.1.min.js></script><script type=text/javascript src=/lib/slideout/slideout-1.0.1.min.js></script><script type=text/javascript src=/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin=anonymous></script><script type=text/javascript>window.MathJax={showProcessingMessages:!1,messageStyle:'none'}</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type=text/javascript src=/js/load-photoswipe.js></script><script type=text/javascript src=/lib/photoswipe/photoswipe.min.js></script><script type=text/javascript src=/lib/photoswipe/photoswipe-ui-default.min.js></script><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><script src=/js/custom.js></script></body></html>
+<span class=heart>
+<i class=iconfont><svg class="icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14"><path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7.0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1.0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2.0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3.1-42.5-8-83.6-24-122.2z" fill="#8a8a8a"/></svg>
+</i>
+</span><span class=author>
+DY Wong
+</span></span>
+<span id=busuanzi_container>
+访客数/访问量：<span id=busuanzi_value_site_uv></span>/<span id=busuanzi_value_site_pv></span>
+</span>
+</div>
+</footer>
+<div class=back-to-top id=back-to-top>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><path d="M510.866688 227.694839 95.449397 629.218702h235.761562L329.15309 958.01517h362.40389L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777h894.052392v131.813095H63.840492V63.962777zm0 0"/></svg>
+</i>
+</div>
+</div>
+<script type=text/javascript src=/lib/jquery/jquery-3.2.1.min.js></script>
+<script type=text/javascript src=/lib/slideout/slideout-1.0.1.min.js></script>
+<script type=text/javascript src=/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin=anonymous></script>
+<script type=text/javascript>window.MathJax={showProcessingMessages:!1,messageStyle:'none'}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<script type=text/javascript src=/js/load-photoswipe.js></script>
+<script type=text/javascript src=/lib/photoswipe/photoswipe.min.js></script>
+<script type=text/javascript src=/lib/photoswipe/photoswipe-ui-default.min.js></script>
+<script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script>
+<script src=/js/custom.js></script>
+</body>
+</html>
