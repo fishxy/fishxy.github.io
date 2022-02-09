@@ -15,7 +15,7 @@
 <meta name=mobile-web-app-capable content="yes">
 <meta name=author content="DY Wong">
 <meta name=description content="做了一年多的工作流产品相关的事情，简单写写工作流产品的设计。 在一般的后台系统中，都会涉及到工作流相关的内容，有些是作为一个复杂系统的一部分存">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=canonical href=https://fishxy.github.io/post/product/%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1/>
 <link rel=icon href=/favicon.ico>
 <link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous>
@@ -29,7 +29,7 @@
 <meta itemprop=name content="工作流平台设计">
 <meta itemprop=description content="做了一年多的工作流产品相关的事情，简单写写工作流产品的设计。 在一般的后台系统中，都会涉及到工作流相关的内容，有些是作为一个复杂系统的一部分存"><meta itemprop=datePublished content="2018-09-23T00:00:00+00:00">
 <meta itemprop=dateModified content="2018-09-23T00:00:00+00:00">
-<meta itemprop=wordCount content="3263">
+<meta itemprop=wordCount content="3262">
 <meta itemprop=keywords content="workflow,工作流平台,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="工作流平台设计">
 <meta name=twitter:description content="做了一年多的工作流产品相关的事情，简单写写工作流产品的设计。 在一般的后台系统中，都会涉及到工作流相关的内容，有些是作为一个复杂系统的一部分存"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
@@ -128,7 +128,7 @@
 <div class=post-category>
 <a href=https://fishxy.github.io/categories/product/> Product </a>
 </div>
-<span class=more-meta> 3263 words </span>
+<span class=more-meta> 3262 words </span>
 <span class=more-meta> 7 min read </span>
 <span id=busuanzi_container_page_pv>
 | 阅读 <span id=busuanzi_value_page_pv></span>
@@ -151,7 +151,7 @@
 <p>做了一年多的工作流产品相关的事情，简单写写工作流产品的设计。</p>
 <p>在一般的后台系统中，都会涉及到工作流相关的内容，有些是作为一个复杂系统的一部分存在，有些则是作为单独的工作流平台驱动业务使用。设计好工作流，不光是能为用户使用系统提供规范、高效的工具，也是对产品经理业务抽象能力的挑战。</p>
 <h1 id=工作流的意义>工作流的意义</h1>
-<p>这里就不得不提到协同办公、OA等系统，通常在类似的一些企业级的系统中，很多事项是无法由一个人进行闭环完成的，比如说一般OA中都会有请假申请、出差申请、人事上的入离职审批等等，都是需要经过一个申请人加层层审批人处理的过程，还有类似流水线的操作，只有当上一个人处理完才能轮到下一个人进行操作，那对于这些系统来说，工作流(引擎)就是驱动这些业务事件、流程能够正常运转的关键所在。</p>
+<p>这里就不得不提到协同办公、OA 等系统，通常在类似的一些企业级的系统中，很多事项是无法由一个人进行闭环完成的，比如说一般 OA 中都会有请假申请、出差申请、人事上的入离职审批等等，都是需要经过一个申请人加层层审批人处理的过程，还有类似流水线的操作，只有当上一个人处理完才能轮到下一个人进行操作，那对于这些系统来说，工作流(引擎)就是驱动这些业务事件、流程能够正常运转的关键所在。</p>
 <p>简单来说，工作流就是把一项复杂的工作化解为多个环节，由多人协同处理完成，利用工作流进行协调、规范整个业务的执行。通常来说，企业引入工作流可以达到：</p>
 <ul>
 <li>规范内部管理制度</li>

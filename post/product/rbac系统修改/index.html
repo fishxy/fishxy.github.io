@@ -15,7 +15,7 @@
 <meta name=mobile-web-app-capable content="yes">
 <meta name=author content="DY Wong">
 <meta name=description content="背景 刚来公司的时候，接手的后台管理产品面临最大的需求就是要改造管理后台的权限体系系统。 当时产品的权限体系面对后续不断增加的需求，不能完全支撑">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=canonical href=https://fishxy.github.io/post/product/rbac%E7%B3%BB%E7%BB%9F%E4%BF%AE%E6%94%B9/>
 <link rel=icon href=/favicon.ico>
 <link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous>
@@ -29,7 +29,7 @@
 <meta itemprop=name content="RBAC系统修改">
 <meta itemprop=description content="背景 刚来公司的时候，接手的后台管理产品面临最大的需求就是要改造管理后台的权限体系系统。 当时产品的权限体系面对后续不断增加的需求，不能完全支撑"><meta itemprop=datePublished content="2019-03-12T00:00:00+00:00">
 <meta itemprop=dateModified content="2019-03-16T00:00:00+00:00">
-<meta itemprop=wordCount content="2006">
+<meta itemprop=wordCount content="1910">
 <meta itemprop=keywords content="RBAC,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="RBAC系统修改">
 <meta name=twitter:description content="背景 刚来公司的时候，接手的后台管理产品面临最大的需求就是要改造管理后台的权限体系系统。 当时产品的权限体系面对后续不断增加的需求，不能完全支撑"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
@@ -128,8 +128,8 @@
 <div class=post-category>
 <a href=https://fishxy.github.io/categories/product/> Product </a>
 </div>
-<span class=more-meta> 2006 words </span>
-<span class=more-meta> 5 min read </span>
+<span class=more-meta> 1910 words </span>
+<span class=more-meta> 4 min read </span>
 <span id=busuanzi_container_page_pv>
 | 阅读 <span id=busuanzi_value_page_pv></span>
 </span>
@@ -143,7 +143,7 @@
 <li><a href=#背景>背景</a></li>
 <li><a href=#权限本质>权限本质</a>
 <ul>
-<li><a href=#rbac模型>RBAC模型</a></li>
+<li><a href=#rbac-模型>RBAC 模型</a></li>
 </ul>
 </li>
 <li><a href=#改造方案>改造方案</a></li>
@@ -159,21 +159,21 @@
 <ul>
 <li>代码层定义了多个角色，一个角色的建立到删除都需要一次代码变更后上线才生效，角色有哪些权限和操作也是在代码层面写死的</li>
 <li>给用户分配角色在前台没有统一管理端操作，不支持批量操作，如果给一个用户分配多个角色需要操作多次</li>
-<li>人员/角色没有分组和上下级的概念，只有一个管理员可以对其他所有用户进行操作，实际上针对下属每个项目组/部门级别，应该有分管leader进行统一管理，由leader对下属人员进行操作</li>
+<li>人员/角色没有分组和上下级的概念，只有一个管理员可以对其他所有用户进行操作，实际上针对下属每个项目组/部门级别，应该有分管 leader 进行统一管理，由 leader 对下属人员进行操作</li>
 <li>其他关于开发上比较麻烦的问题</li>
 </ul>
 <h2 id=权限本质>权限本质</h2>
-<p>那面向企业的管理系统，由于不同企业之间的管理规范不同，设计一套高弹性、满足所有企业需求的权限管理体系是不可能的，但是基本逻辑是相同的，<strong><code>即权限的本质，就是规定了哪些用户可以对哪些资源有哪些操作</code></strong>，如果直接为用户主体赋权的话，会导致大量繁杂的劳动，因此这里引出一个关于权限模型的概念——RBAC，目前产品大多都是采取RBAC模型进行一些个性化的拓展。</p>
-<h3 id=rbac模型>RBAC模型</h3>
+<p>那面向企业的管理系统，由于不同企业之间的管理规范不同，设计一套高弹性、满足所有企业需求的权限管理体系是不可能的，但是基本逻辑是相同的，<strong><code>即权限的本质，就是规定了哪些用户可以对哪些资源有哪些操作</code></strong>，如果直接为用户主体赋权的话，会导致大量繁杂的劳动，因此这里引出一个关于权限模型的概念——RBAC，目前产品大多都是采取 RBAC 模型进行一些个性化的拓展。</p>
+<h3 id=rbac-模型>RBAC 模型</h3>
 <p>RBAC——Role-Based Access Control，基于角色的访问控制，在用户（User）和权限（Permission）中引入角色（Role）概念，将权限与角色进行关联，再将角色赋予用户，这样在后期用户权限变化时，只需要在用户与角色之间进行变动，授权会更加灵活。</p>
-<p>RBAC根据复杂程度不同，又分为RBAC0、RBAC1、RBAC2和RBAC3，其中RBAC0是基础模型，其余三个都是以他为基础的扩展。</p>
+<p>RBAC 根据复杂程度不同，又分为 RBAC0、RBAC1、RBAC2 和 RBAC3，其中 RBAC0 是基础模型，其余三个都是以他为基础的扩展。</p>
 <h4 id=rbac0>RBAC0</h4>
-<p>RBAC0是最基础的权限模型，定义了构成一个RBAC权限控制的最小组成，其中包含四部分元素组成：</p>
+<p>RBAC0 是最基础的权限模型，定义了构成一个 RBAC 权限控制的最小组成，其中包含四部分元素组成：</p>
 <ol>
-<li>用户User，U表示用户集</li>
-<li>角色Role，R表示角色集</li>
-<li>会话Session，S表示会话集</li>
-<li>权限Permission——包括操作Operation和操作的对象Object，P表示权限集</li>
+<li>用户 User，U 表示用户集</li>
+<li>角色 Role，R 表示角色集</li>
+<li>会话 Session，S 表示会话集</li>
+<li>权限 Permission——包括操作 Operation 和操作的对象 Object，P 表示权限集</li>
 </ol>
 <p><img src=https://i.loli.net/2019/01/19/5c42dcd98f0c0.png alt></p>
 <p>其中</p>
@@ -185,15 +185,15 @@
 </ul>
 <p>即当一个或多个角色分配给一个用户后，此用户就拥有了这个角色的所有权限，用户在创建会话后激活所拥有的一个或多个角色，获得相应的权限，从而有权进行许可范围内的操作。</p>
 <p>同理，一个角色也可以分配给多个用户，即相同角色的用户拥有相同的权限。</p>
-<p>由于RBAC0是最基础的权限模型，所以对于功能简单，使用人员较少，且岗位权限划分清晰的系统来说比较实用。</p>
+<p>由于 RBAC0 是最基础的权限模型，所以对于功能简单，使用人员较少，且岗位权限划分清晰的系统来说比较实用。</p>
 <h4 id=rbac1>RBAC1</h4>
-<p>在RBAC0基础上，将角色引入上下级，增加子角色，继承关系，就是RBAC1，<strong><code>即子角色可以继承父角色的所有权限</code></strong>。</p>
+<p>在 RBAC0 基础上，将角色引入上下级，增加子角色，继承关系，就是 RBAC1，<strong><code>即子角色可以继承父角色的所有权限</code></strong>。</p>
 <p>有了继承的概念，就有了上下级的包含关系，在业务上就可以利用这一特性，对有上下级之分的人员进行不同的角色分配。</p>
 <h4 id=rbac2>RBAC2</h4>
-<p>RBAC2是基于RBAC0进行扩展，增加了角色的**<code>访问控制(SSD&DSD)</code>**</p>
+<p>RBAC2 是基于 RBAC0 进行扩展，增加了角色的**<code>访问控制(SSD&DSD)</code>**</p>
 <ul>
 <li>
-<p>SSD静态职责分离</p>
+<p>SSD 静态职责分离</p>
 <ul>
 <li>互斥角色：同一个用户不能分配到一组互斥角色集合中的多个角色</li>
 <li>基数约束：一个角色只能被分配给有限数量的用户，一个用户可拥有的角色数量有限，同样一个角色对应的权限数量也应有限</li>
@@ -201,19 +201,19 @@
 </ul>
 </li>
 <li>
-<p>DSD动态职责分离</p>
-<p>例如，允许一个用户具有2个角色的权限信息，但在运行时只允许激活1个</p>
+<p>DSD 动态职责分离</p>
+<p>例如，允许一个用户具有 2 个角色的权限信息，但在运行时只允许激活 1 个</p>
 </li>
 </ul>
 <h4 id=rbac3>RBAC3</h4>
-<p>它是最全面的权限管理，是基于RBAC0的基础上，将RBAC1和RBAC2进行整合，所以它**<code>包含了RBAC0、RBAC1、RBAC2的所有特点</code>**。</p>
-<p>以上就是RBAC权限模型的简介，其实无论产品形态，业务复杂程度，最终都可以通过以RBAC模型为基础进行扩展，灵活运用解决我们的权限分配问题。</p>
+<p>它是最全面的权限管理，是基于 RBAC0 的基础上，将 RBAC1 和 RBAC2 进行整合，所以它**<code>包含了RBAC0、RBAC1、RBAC2的所有特点</code>**。</p>
+<p>以上就是 RBAC 权限模型的简介，其实无论产品形态，业务复杂程度，最终都可以通过以 RBAC 模型为基础进行扩展，灵活运用解决我们的权限分配问题。</p>
 <h2 id=改造方案>改造方案</h2>
-<p>那回到我们的开始，了解了RBAC模型的概念后，再来看我们权限体系需要改进的地方：</p>
+<p>那回到我们的开始，了解了 RBAC 模型的概念后，再来看我们权限体系需要改进的地方：</p>
 <ul>
 <li>分割功能权限和数据权限，功能权限可体现在某一角色具体可视哪些导航菜单，可进行哪些操作，数据权限可提现在某一部门下的角色只能访问属于其对应部门下的数据/资源内容。</li>
-<li>之前采用的是RBAC0模型，随着用户、权限、角色的增加，越来越不便于管理，因此我们要在此RBAC权限模型基础上进行扩展，首先引入用户组(部门)信息，在角色/权限上引入上下级概念，便于各部门leader自行管理下属权限。</li>
-<li>原来角色的兼容，这部分不麻烦，新角色大部分权限与原来相同，再协商伙伴项目组对用户部门信息进行同步，对用户重新分配权限即可，同时针对每个部门的leader赋予相关的管理权限。</li>
+<li>之前采用的是 RBAC0 模型，随着用户、权限、角色的增加，越来越不便于管理，因此我们要在此 RBAC 权限模型基础上进行扩展，首先引入用户组(部门)信息，在角色/权限上引入上下级概念，便于各部门 leader 自行管理下属权限。</li>
+<li>原来角色的兼容，这部分不麻烦，新角色大部分权限与原来相同，再协商伙伴项目组对用户部门信息进行同步，对用户重新分配权限即可，同时针对每个部门的 leader 赋予相关的管理权限。</li>
 <li>重新设计前台权限管理模块，将原来的权限管理功能统一设计，优化使用、操作体验，由系统管理员、部门管理员进行访问控制</li>
 <li>其他开发上优化的地方……</li>
 </ul>

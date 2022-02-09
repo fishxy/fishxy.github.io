@@ -15,7 +15,7 @@
 <meta name=mobile-web-app-capable content="yes">
 <meta name=author content="DY Wong">
 <meta name=description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=canonical href=https://fishxy.github.io/post/product/%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BB%BA%E7%AB%8B/>
 <link rel=icon href=/favicon.ico>
 <link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous>
@@ -29,7 +29,7 @@
 <meta itemprop=name content="浅谈搭建统一数据平台">
 <meta itemprop=description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><meta itemprop=datePublished content="2018-11-28T00:00:00+00:00">
 <meta itemprop=dateModified content="2018-11-28T00:00:00+00:00">
-<meta itemprop=wordCount content="1393">
+<meta itemprop=wordCount content="1380">
 <meta itemprop=keywords content="work,数据,"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="浅谈搭建统一数据平台">
 <meta name=twitter:description content="之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
@@ -128,7 +128,7 @@
 <div class=post-category>
 <a href=https://fishxy.github.io/categories/product/> Product </a>
 </div>
-<span class=more-meta> 1393 words </span>
+<span class=more-meta> 1380 words </span>
 <span class=more-meta> 3 min read </span>
 <span id=busuanzi_container_page_pv>
 | 阅读 <span id=busuanzi_value_page_pv></span>
@@ -145,7 +145,7 @@
 <p>之前做工作流产品的时候，做过其中有关工单的统计分析的功能，最近又在公司做统一数据平台相关的东西，这里正好总结一下过去和现在的经验和遇到的问题。</p>
 <p>数据平台主要是提供有关于数据报表的展示和拓展服务的。</p>
 <p>那对于个人用户来说，常见的多是个人账号相关的数据，比如说你的社交网络数据——微博每月数据报告，会统计你的发博数量、获赞数量、粉丝互动等，或则说你的支付数据——支付宝的年度报告这一类似的数据统计，个人用户所看到的数据更多是作为用户方，对自己一段行为过程产生数据的总结。</p>
-<p>那对于一般的企业用户来说，比如说我们ehr系统中会统计面试offer的通过数量，拒绝offer的原因统计，或者比如说OA中有关员工数据的统计，甚至还有BI这种专门为企业提供数据分析的系统软件，那对于企业来说，更多场景下是对一段经营后产生的数据经过整理分析，形成报告、得出结论，进而为（高层）下一步行动做决策。</p>
+<p>那对于一般的企业用户来说，比如说我们 ehr 系统中会统计面试 offer 的通过数量，拒绝 offer 的原因统计，或者比如说 OA 中有关员工数据的统计，甚至还有 BI 这种专门为企业提供数据分析的系统软件，那对于企业来说，更多场景下是对一段经营后产生的数据经过整理分析，形成报告、得出结论，进而为（高层）下一步行动做决策。</p>
 <p>我这里主要讲有关于企业、公司使用的数据平台的建立。</p>
 <h1 id=建立统一数据平台的意义>建立统一数据平台的意义</h1>
 <p>数据平台其实就是根据企业所需要的数据，按照一定的需求进行展示，比如财务的需要关于财务的数据报表，包括公司的盈利分析、亏损分析等等。</p>
@@ -164,14 +164,14 @@
 </li>
 <li>
 <p>小步快跑、快速迭代</p>
-<p>正如前文所说，建立数据平台时，可以不断定一些目标、一些里程碑，和业务人员、leader等利益相关方推广分享，让他们参与使用和评价，收集反馈，当相关人员都有参与感时，数据平台才会持久不断的优化改善，朝着良好的方向发展。</p>
+<p>正如前文所说，建立数据平台时，可以不断定一些目标、一些里程碑，和业务人员、leader 等利益相关方推广分享，让他们参与使用和评价，收集反馈，当相关人员都有参与感时，数据平台才会持久不断的优化改善，朝着良好的方向发展。</p>
 </li>
 </ul>
 <h1 id=提供的功能>提供的功能</h1>
 <p>这块其实要讲的不是很多，对于提供的功能来说，主要有几个方面</p>
 <ul>
 <li>数据报表，直观的数据指标展示，不同的展示形式可以预先定义模板，也可以允许用户进行自定义</li>
-<li>数据报警，可以是设置静态阈值类别的数据报警提醒，也可以是应用ai的报警机制，这方面我都尝试过，在实际上还是需要根据自己业务需要进行选择</li>
+<li>数据报警，可以是设置静态阈值类别的数据报警提醒，也可以是应用 ai 的报警机制，这方面我都尝试过，在实际上还是需要根据自己业务需要进行选择</li>
 <li>定期日报、周报、月报功能，提供能够使用户进行自主配置报告功能</li>
 <li>透视表</li>
 <li>……</li>
