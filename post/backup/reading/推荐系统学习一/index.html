@@ -1,0 +1,406 @@
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<title>推荐系统学习 - 一起摸鱼</title>
+<meta name=renderer content="webkit">
+<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=yes">
+<meta name=MobileOptimized content="width">
+<meta name=HandheldFriendly content="true">
+<meta name=applicable-device content="pc,mobile">
+<meta name=theme-color content="#f8f5ec">
+<meta name=msapplication-navbutton-color content="#f8f5ec">
+<meta name=apple-mobile-web-app-capable content="yes">
+<meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec">
+<meta name=mobile-web-app-capable content="yes">
+<meta name=author content="DY Wong">
+<meta name=description content="文章主要是想对推荐系统涉及的基础概念和常见的使用场景进行简单介绍，并罗列一些推荐系统的基本算法，由于作者本身并不从事程序开发工作，所以对于深">
+<meta name=generator content="Hugo 0.92.1">
+<link rel=canonical href=https://fishxy.github.io/post/backup/reading/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/>
+<link rel=icon href=/favicon.ico>
+<link rel=stylesheet href=/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css integrity="sha256-s6iBPAbm14W+uiK/gmThdPoss6OWsi+bok4sAMGKr38=" media=screen crossorigin=anonymous>
+<link rel=stylesheet href=/css/custom.css>
+<meta property="og:title" content="推荐系统学习">
+<meta property="og:description" content="文章主要是想对推荐系统涉及的基础概念和常见的使用场景进行简单介绍，并罗列一些推荐系统的基本算法，由于作者本身并不从事程序开发工作，所以对于深">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fishxy.github.io/post/backup/reading/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2019-07-18T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-07-18T00:00:00+00:00">
+<meta itemprop=name content="推荐系统学习">
+<meta itemprop=description content="文章主要是想对推荐系统涉及的基础概念和常见的使用场景进行简单介绍，并罗列一些推荐系统的基本算法，由于作者本身并不从事程序开发工作，所以对于深"><meta itemprop=datePublished content="2019-07-18T00:00:00+00:00">
+<meta itemprop=dateModified content="2019-07-18T00:00:00+00:00">
+<meta itemprop=wordCount content="7798">
+<meta itemprop=keywords content="推荐系统,learning,"><meta name=twitter:card content="summary">
+<meta name=twitter:title content="推荐系统学习">
+<meta name=twitter:description content="文章主要是想对推荐系统涉及的基础概念和常见的使用场景进行简单介绍，并罗列一些推荐系统的基本算法，由于作者本身并不从事程序开发工作，所以对于深"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]-->
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-136004904-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body>
+<div id=mobile-navbar class=mobile-navbar>
+<div class=mobile-header-logo>
+<a href=/ class=logo>一起摸鱼</a>
+</div>
+<div class=mobile-navbar-icon>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<nav id=mobile-menu class="mobile-menu slideout-menu">
+<ul class=mobile-menu-list>
+<li class=mobile-menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/>Home</a>
+</li><li class=mobile-menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/post/>Archives</a>
+</li>
+</ul>
+</nav>
+<link rel=stylesheet href=/lib/photoswipe/photoswipe.min.css>
+<link rel=stylesheet href=/lib/photoswipe/default-skin/default-skin.min.css>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div>
+<header id=header class="header container">
+<div class=logo-wrapper>
+<a href=/ class=logo>
+一起摸鱼
+</a>
+</div>
+<nav class=site-navbar>
+<ul id=menu class=menu>
+<li class=menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/>Home</a>
+</li>
+<li class=menu-item>
+<a class=menu-item-link href=https://fishxy.github.io/post/>Archives</a>
+</li>
+</ul>
+</nav>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js></script>
+</header>
+<div id=mobile-panel>
+<main id=main class="main bg-llight">
+<div class=content-wrapper>
+<div id=content class="content container">
+<article class="post bg-white">
+<header class=post-header>
+<h1 class=post-title>推荐系统学习</h1>
+<div class=post-meta>
+<time datetime=2019-07-18 class=post-time>
+2019-07-18
+</time>
+<div class=post-category>
+<a href=https://fishxy.github.io/categories/reading/> reading </a>
+</div>
+<span class=more-meta> 7798 words </span>
+<span class=more-meta> 16 min read </span>
+<span id=busuanzi_container_page_pv>
+| 阅读 <span id=busuanzi_value_page_pv></span>
+</span>
+</div>
+</header>
+<div class=post-toc id=post-toc>
+<h2 class=post-toc-title>Table of Contents</h2>
+<div class=post-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#离线实验>离线实验</a></li>
+<li><a href=#用户调查>用户调查</a></li>
+<li><a href=#在线实验>在线实验</a></li>
+</ul>
+<ul>
+<li><a href=#用户满意度>用户满意度</a></li>
+<li><a href=#预测准确度>预测准确度</a>
+<ul>
+<li><a href=#评分预测>评分预测</a></li>
+<li><a href=#top-n-推荐>Top N 推荐</a></li>
+</ul>
+</li>
+<li><a href=#覆盖率>覆盖率</a></li>
+<li><a href=#多样性>多样性</a></li>
+<li><a href=#新颖性>新颖性</a></li>
+<li><a href=#惊喜度>惊喜度</a></li>
+<li><a href=#信任度>信任度</a></li>
+<li><a href=#实时性>实时性</a></li>
+<li><a href=#健壮性>健壮性</a></li>
+<li><a href=#商业目标>商业目标</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class=post-content>
+<div class=douban_show>
+<div id=db9787115281586 date-dbid=9787115281586 class="douban_item post-preview"></div>
+</div>
+<p>文章主要是想对推荐系统涉及的基础概念和常见的使用场景进行简单介绍，并罗列一些推荐系统的基本算法，由于作者本身并不从事程序开发工作，所以对于深层次的技术探讨上涉及较少，希望通过自己阅读书籍和收集整理其他文章的内容对推荐系统进行一个简单的梳理，也希望能够通过此文帮助大家更容易的理解推荐系统。</p>
+<h1 id=推荐系统是什么>推荐系统是什么</h1>
+<p>一句话来说，推荐系统就是根据<strong>用户的历史行为、用户属性、社交关系、所处的环境以及上下文</strong>等等信息去判断满足用户<strong>需要或是感兴趣</strong>的内容的一类服务/应用。</p>
+<h1 id=为什么需要推荐系统>为什么需要推荐系统</h1>
+<p>这就不得不从早期的分类目录、搜索引擎说起了，在社会进步的过程中我们产生了大量的知识、信息（数据），人类也从信息匮乏时代走向了<strong>信息过载</strong>时代，对于用户也就是信息消费者来说，从大量信息中找到自己当下需要的相关信息是很困难的，于是互联网时代的分类目录（如 hao123）和搜索引擎应运而生，他们允许用户根据自己当下<strong>明确</strong>的需求或是<strong>准确</strong>的关键词<strong>主动</strong>去检索相关的信息。</p>
+<p>当然后面的发展我们也知道了，信息过载的情况并不会好转，我们还是有大量的信息被生产出来，生产者苦于自己的信息淹没在海洋里，信息消费者苦于找不到自己需要的信息。而推荐系统也正式应运而生，它与搜索引擎不同的是，它不需要用户当前明确的需求，而是根据用户的历史行为等数据进行分析，从而<strong>主动给用户推荐</strong>满足他们需求或是感兴趣的内容。</p>
+<p>通过上面的文字我们能清晰地了解到，不管是分类目录、搜索引擎还是推荐系统，都是为了解决<strong>信息过载</strong>这个问题，都是为了信息能够分发到消费者。不同的是搜索引擎不需要用户提供明确的需求，用户处于被动接收信息的状态，而搜索引擎则需要用户主动提出自己明确的需求（关键词）。</p>
+<h1 id=推荐系统的用处>推荐系统的用处</h1>
+<p>上文提到了，信息过载后信息分发难催生了推荐系统，而像电子商务、电影视频媒体、音乐电台的个性化推荐、个性化阅读、广告以及 LBS 等等服务都是推荐系统常见的使用场景。想想你在逛淘宝时给你推荐感兴趣的商品、在流媒体网站推荐视频、订外卖、听音乐，推荐系统都在将你可能感兴趣的信息推送给你。于是由于每个人的喜好和行为不同，收到的信息也就不同，我们每一次操作行为都会作为一份数据留下记录，推荐系统从而根据我们的数据为我们提供不同的个性化信息，以此实现个性化推荐，进而提高产品的各项业务指标。</p>
+<h1 id=推荐系统的组成>推荐系统的组成</h1>
+<p><img src=https://fishw.xyz/blogdata/img/20190718160759.png alt></p>
+<p>一个完整的推荐系统一般都是由 3 个参与方组成：</p>
+<ul>
+<li>用户</li>
+<li>内容提供方</li>
+<li>提供推荐系统的网站（产品）</li>
+</ul>
+<p>一个好的推荐系统应当首先能够满足用户的需求，为用户推荐他们需要、感兴趣的信息；其次能够将内容提供方的内容更好的推荐给感兴趣的用户，寻求最大转化，而不只是推荐最热门的内容；最后好的推荐系统设计，应当能够让推荐系统本身收集到高质量的用户反馈，不断完善推荐的质量，增加用户和网站的交互，提高网站的收入。因此在评测一个推荐算法时，需要同时考虑三方的利益，一个好的推荐系统是能够令三方共赢的系统。</p>
+<p>尽管各家的推荐系统会有不同，但是总的来说推荐系统的结构都是类似的，都是由线上和线下两部分组成。线下部分包括日志系统和推荐算法，而线上部分就是用户可见的不同页面展示，线下部分通过学习用户数据建立模型，在新条件下计算相应的推荐内容，再呈现在线上页面中。</p>
+<h1 id=推荐系统的实验方法>推荐系统的实验方法</h1>
+<p>推荐系统主要有 3 种评测推荐效果的实验方法：离线实验、用户调查和在线实验。我们通过利用这 3 种常见的实验方法根据不同指标对推荐系统进行评测，确认是否达到我们的要求。</p>
+<h2 id=离线实验>离线实验</h2>
+<p>离线实验的方法一般包含以下几个步骤：</p>
+<ul>
+<li>通过日志系统获得用户行为数据，并按照一定格式生成一个标准的数据集；</li>
+<li>将数据集按照一定的规则分成训练集和测试集；</li>
+<li>在训练集上训练用户兴趣模型，在测试集上进行预测；</li>
+<li>通过事先定义的离线指标评测算法在测试集上的预测结果。</li>
+</ul>
+<p>可以看出，离线实验都是在数据集上完成的，不需要一个实际的系统和真实用户参与，只需要一些从实际系统中提取的数据集即可，因此离线实验速度快，可以方便快速的测试大量算法，它的主要缺点是无法获得很多商业上关注的指标，如点击率、转化率等。</p>
+<h2 id=用户调查>用户调查</h2>
+<p>用户调查不论是在做产品的需求调研，或是评估一件事情结果如何上都是最有效的方法。同样的，在推荐系统上，由于高预测准确率不等于高用户满意度，所以我们评测一个要投入使用的推荐算法，最好的方式就是调查一些真实用户，让他们在要测试的推荐系统上完成一些任务、操作，观察并记录他们的行为，并让他们回答一些问题，最后通过分析来了解系统是否满足我们的需求。</p>
+<p>但是不论是其他类型的产品还是推荐系统，在用户调查上都是一项成本较高的活动，从调查测试的设计再到测试用户的选取都需要精心安排，十分麻烦。</p>
+<p>下面引用《推荐系统实战》中的原文：</p>
+<blockquote>
+<p>用户调查的优缺点也很明显。它的优点是可以获得很多体现用户主观感受的指标，相对在线实验风险很低，出现错误后很容易弥补。缺点是招募测试用户代价较大，很难组织大规模的测试用户，因此会使测试结果的统计意义不足。此外，在很多时候设计双盲实验非常困难，而且用户在测试环境下的行为和真实环境下的行为可能有所不同，因而在测试环境下收集的测试指标可能在真实环境下无法重现。</p>
+</blockquote>
+<h2 id=在线实验>在线实验</h2>
+<p>在线实验通常是在离线实验和必要的用户调查之后，通过上线新算法与旧算法进行 AB 测试，再通过统计不同评测指标来比较效果。</p>
+<p>由于 AB 测试采取控制变量的方式，所以它可以公平的获得不同改动的真实数据，包括商业上关注的指标，但它的缺点是测试周期长，必须进行长期的实验才能得到可靠地结果。此外对于一个大型复杂系统，从前台页面展示到后端算法中间流量往往经过了很多层，由不同团队进行分工，而且都有可能再进行 AB 测试，那么如何合理分配流量保证各个团队测试公平就是需要考虑设计的了，关于 AB 测试这里就不在过多赘述了，它是一种常见的在线测评方法，在产品设计的改动中也经常采用这种方法，原理同我们的控制变量法是一样的。</p>
+<p>综上所述，我们一般只有在测试离线实验和用户调查中表现较好的算法才应该进行在线实验，从而节省投入成本。</p>
+<p>因此，一个新的推荐算法最终上线，需要完成上面所说的 3 个实验。</p>
+<ul>
+<li>
+<p>首先，需要通过离线实验证明它在很多离线指标上优于现有的算法。</p>
+</li>
+<li>
+<p>然后，需要通过用户调查确定它的用户满意度不低于现有的算法。</p>
+</li>
+<li>
+<p>最后，通过在线的 AB 测试确定它在我们关心的指标上优于现有的算法。</p>
+</li>
+</ul>
+<h1 id=推荐系统的评测指标>推荐系统的评测指标</h1>
+<p>很多人将推荐系统定义为能够准确预测的系统，比如某个推荐系统预测你一定会买商品 A，后来你也确实购买了，那么这就被看做一次准确地预测。这个称之为预测准确度，他是评测推荐系统的重要指标。但是很多时候，准确预测并不代表好的预测，如果说用户无论是否推荐，他都准备购买商品 A，那么这次推荐并未带来更大的收益，仅仅是方便用户更快的找到自己需要的商品 A，对于用户来说这次推荐不够惊喜新颖。</p>
+<p>《推荐系统实战》中还提到了另一个极端的例子，比如某个系统预测太阳东升西落，虽然预测准确率是 100%，但却是一种没有意义的预测。</p>
+<p>所以我们说，推荐系统不仅仅需要能够准确预测用户的行为，也更应当满足业务需要，拓宽用户视野，发觉埋没在长尾中的信息，这也是后面我们要讲的，一个好的推荐系统应当能为用户提供他们感兴趣的包括很多难以发现的信息，也应当帮助信息生产者将他们的信息更容易的推荐给他们感兴趣的用户。</p>
+<p>因此评测一个推荐系统对三方利益的影响，需要根据实际需要从不同角度的指标进行评估。</p>
+<h2 id=用户满意度>用户满意度</h2>
+<p>用户作为推荐系统的重要参与者，其满意度是评测推荐系统的最重要指标。但是，用户满意度没有办法离线计算，只能通过用户调查或者在线实验获得。</p>
+<p>在线系统中，用户满意度主要通过一些对用户行为的统计得到。比如在电子商务网站中，用户如果购买了推荐的商品，就表示他们在一定程度上满意。因此，我们可以利用购买率度量用户的满意度。</p>
+<p>此外，有些网站会通过设计一些用户反馈界面收集用户满意度。比如在豆瓣网络电台中，都有对推荐结果满意或者不满意的反馈按钮（通过红心和垃圾箱的反馈来度量用户满意度），通过统计两种按钮的单击情况就可以度量系统的用户满意度。更一般的情况下，我们可以用点击率、用户停留时间和转化率等指标度量用户的满意度。</p>
+<h2 id=预测准确度>预测准确度</h2>
+<p>预测准确度衡量一个推荐系统或者推荐算法预测用户行为的能力，是最重要的推荐系统离线评测指标。但它不是一个绝对准确唯一追求的目标，上文提到过推荐商品购买的情况，和预测太阳东升西落的情况就是一个反例。</p>
+<p>所以推荐系统中预测准确度固然很重要，但也要能够拓宽用户的视野，发掘更多长尾内容，帮助用户发现那些他们感兴趣但却不那么容易发现的内容，也要帮助内容提供者更可能的将他们的内容提供给感兴趣的用户。</p>
+<p>预测准确度可以利用离线的数据集，分为训练集和测试集，通过利用训练集的训练处的模型预测用户在测试集的行为，并与测试集上的真实数据对比作为预测的准确度。</p>
+<p>预测准确度的指标包括以下几类：</p>
+<h3 id=评分预测>评分预测</h3>
+<p>评分预测就是利用用户对物品的评分历史，学习他的兴趣模型，进而预测用户在将来看到一个他们有评分过的物品时，会给这个物品评多少分。</p>
+<p>评分预测的预测准确度一般通过均方根误差（RMSE）和平均绝对误差（MAE）计算。对于测试集中的一个用户 \(u\) 和物品 \(i\)，令 \(r*{ui}\) 是用户 \(u\) 对物品 \(i\) 的实际评分，而 \(\overset { \wedge }{ r } *{ ui }\) 是推荐算法给出的预测评分，那么 RMSE 和 MAE 的定义为：</p>
+<p>$$
+RMSE=\frac { \sqrt { \sum { {<em>{ u,i\in T }{ (r</em>{ ui }-\overset \wedge r_{ ui } } } } ) } }{ \left| T \right|}
+$$</p>
+<p>$$
+MAE\quad =\quad \frac { \sum { { <em>{ u,i\in T }{ \left| r</em>{ ui }-{ \overset { \wedge }{ r } }_{ ui } \right| } } } }{ \left| T \right| }
+$$</p>
+<p>RMSE 由于使用了平方项惩罚，从而加大了对预测不准的用户物品评分的惩罚，因而对系统的评测更苛刻。</p>
+<h3 id=top-n-推荐>Top N 推荐</h3>
+<p>Top N 推荐就是给用户一个个性化的推荐列表，他的预测准确率一般通过准确率（precision）/召回率（recall）度量。这两个是源于机器学习中的概念。</p>
+<p>令\(R(u)\)是根据用户在训练集上的行为给用户作出的推荐列表，而\(T(u)\)是用户在测试集上的行为列表。那么，推荐结果的召回率定义为：</p>
+<p>$$
+Recall\quad =\quad \frac { \sum _{ u\in U }^{ }{ \left| R(u)\cap T(u) \right| } }{ \sum _{ u\in U }^{ }{ \left| T(u) \right| } }
+$$</p>
+<p>准确率定义为：</p>
+<p>$$
+Precision\quad =\quad \frac { \sum _{ u\in U }^{ }{ \left| R(u)\cap T(u) \right| } }{ \sum _{ u\in U }^{ }{ \left| R(u) \right| } }
+$$</p>
+<p>实际使用场景中，Top N 相比评分预测会更有意义，真实情况就是一部电影用户看后可能会给很高的分数，但是用户看这个电影的可能性确实非常小，因此预测用户是否会看一部电影要比预测看了电影后给它多少评分更加重要，而且现在的产品，出去点评类的，已经很少有用评分去手机用户反馈了。</p>
+<h2 id=覆盖率>覆盖率</h2>
+<p>覆盖率描述一个推荐系统对物品长尾的发掘能力，也就是能否将内容提供者的内容都能被推荐到其感兴趣的用户面前的能力。覆盖率有不同的定义方法，最简单的定义为推荐系统能够推荐出来的物品占总物品集合的比例，也就是对所有用户的推荐列表取并集，看看能否覆盖所有的内容，覆盖比例是多少。</p>
+<p>假设系统的用户集合为\(U\)，推荐系统给每个用户推荐一个长度为 N 的物品列表\(R(u)\)。那么推荐系统的覆盖率可以通过下面的公式计算：</p>
+<p>$$
+Coverage\quad =\quad \frac { \left| { U }_{ u\in U }R(u) \right| }{ \left| I \right| }
+$$</p>
+<p>当然这个定义是很粗略的，我们能发现这个定义说明了如果覆盖率是 100% 的系统，他可以将每个物品都推荐给至少一个用户，此外我们也能发现热门排行榜的覆盖率是最低的，因为他只会推荐占总物品中比例很小的热门物品。</p>
+<p>如果对于长尾内容只推荐很少的几次，是否就能简单的说推荐覆盖率很高呢？因此它可以粗略的评估一个推荐系统的覆盖率，但还不能用来准确的评估对长尾内容的发掘能力。如果需要评估长尾内容的发掘能力，我们应当统计推荐列表中不同物品出现次数的分布。如果所有的物品都出现在推荐列表，且出现的次数都差不多，那么就可以说明推荐系统发掘长尾的能力很好，进而确定系统覆盖率高。</p>
+<p>经济学和信息学中有两个著名的指标，第一个就是信息熵，熵值混乱程度，熵最大的分布，就是各种物品出现的概率均匀，熵越小，就代表分布越集中，混乱程度越小。所以我们可以计算物品分布的熵值，并希望熵越大越好，熵越大指分布越平均，推荐系统也就更接近全覆盖，而不是只集中在少数热门的物品。熵的计算公式：</p>
+<p>$$
+H\quad =\quad -\sum _{ i=1 }^{ n }{ p(i)\log { p(i) } }
+$$</p>
+<p>第二个指标是基尼系数：</p>
+<p>$$
+G=\frac 1{ n-1 } \sum _{ j=1 }^{ n }{ (2j-n-1)p(i_j) }
+$$</p>
+<p>其中\(p(x)\)是流行程度从小到大排序，\(i_j\)是物品列表\(I\)按照从大到小排序的第\(i\)个物品。下面引用《推荐系统实战》书中一图对其原理进行解释</p>
+<p><img src=https://fishw.xyz/blogdata/img/20190718140637.png alt></p>
+<p>社会学中有种现象叫做马太效应，强者愈强，弱者愈弱。这样，越热门的物品会越热门，越冷门的物品越会无人问津，推荐系统就希望尽量消除这种马太效应，让冷门物品也能找到对自己感兴趣的用户，让用户也不必只看排行榜，自己的兴趣和需求也能得到更好的满足。所以我们先根据初始用户行为（根据用户行为定义的热门/冷门）计算物品的基尼系数，然后再根据推荐系统行为（根据推荐系统的推荐次数定义的热门/冷门）计算物品的基尼系数，如果后者的基尼系数反而大了，那说明推荐算法加剧了马太效应。</p>
+<p>稍微解释一下，如果推荐系统只疯狂推荐某一种物品，其他物品都不推荐，这样的马太效应就反而更甚于初始的情况了，又会进一步加剧整个生态的马太效应。只有推荐系统对物品均匀的推荐，初始的热门/冷门物品的推荐次数都差不多，才能让初始的冷门产品热起来。</p>
+<h2 id=多样性>多样性</h2>
+<p>为了满足用户广泛的兴趣，推荐列表需要能够覆盖用户不同的兴趣领域，即推荐结果需要具有多样性。尽管用户的兴趣在较长的时间跨度中是一样的，但具体到用户访问推荐系统的某一刻，其兴趣往往是单一的，那么如果推荐列表只能覆盖用户的一个兴趣点，而这个兴趣点不是用户这个时刻的兴趣点，推荐列表就不会让用户满意。反之，如果推荐列表比较多样，覆盖了用户绝大多数的兴趣点，那么就会增加用户找到感兴趣物品的概率。因此给用户的推荐列表也需要满足用户广泛的兴趣，即具有多样性。</p>
+<p>多样性描述了推荐列表中物品两两之间的不相似性。因此，多样性和相似性是对应的。假设\(s(i,j)\in [0,1]\)定义了物品\(i\) 和\(j\)之间的相似度，那么用户\(u\)的推荐列表\(R(u)\)的多样性定义如下：</p>
+<p>$$
+Diversity\quad =\quad 1-\frac { \sum { { _{ i,j\in R(u),i\neq j }{ s(i,j) } } } }{ \frac { 1 }{ 2 } \left| R(u) \right| (\left| R(u) \right| -1) }
+$$</p>
+<p>而推荐系统的整体多样性可以定义为所有用户推荐列表多样性的平均值：</p>
+<p>$$
+Diversity\quad =\quad \frac { 1 }{ \left| U \right| } \sum _{ u\in U }^{ }{ Diversity(R(u)) }
+$$</p>
+<p>从上面的定义可以看到，不同的物品相似度度量函数\(s(i,j)\)可以定义不同的多样性。如果用内容相似度描述物品间的相似度，我们就可以得到内容多样性函数，如果用协同过滤的相似度函数描述物品间的相似度，就可以得到协同过滤的多样性函数。</p>
+<p>其实提高覆盖率也能在侧面对提高多样性起到积极作用。</p>
+<h2 id=新颖性>新颖性</h2>
+<p>新颖的推荐是指给用户推荐那些他们之前没听说过的物品，最简单的方式当然是，把那些用户之前在系统中有过行为的物品从推荐列表中过滤掉。比如在一个视频网站中，新颖的推荐不应该给用户推荐那些他们已经看过、打过分或者浏览过的视频。但是，有些视频可能是用户在别的网站看过，或者是在电视上看过，因此仅仅过滤掉本网站中用户有过行为的物品还不能完全实现新颖性。</p>
+<p>还有种方式是让推荐结果中物品的平均热门程度较低，这样就更可能有较高的新颖性。牺牲精度提高新颖性是很容易的，困难的是不牺牲精度，同时提高新颖性。</p>
+<p>但是，用推荐结果的平均流行度度量新颖性比较粗略，因为不同用户不知道的东西是不同的。因此，要准确地统计新颖性需要做用户调查。</p>
+<h2 id=惊喜度>惊喜度</h2>
+<p>惊喜度令用户惊喜的推荐结果是和用户历史上喜欢的物品不相似，但用户却觉得满意的推荐。那么，定义惊喜度需要首先定义推荐结果和用户历史上喜欢的物品的相似度，其次需要定义用户对推荐结果的满意度。</p>
+<p>用户满意度只能通过问卷调查或者在线实验获得，而推荐结果和用户历史上喜欢的物品相似度一般可以用内容相似度定义。也就是说，如果获得了一个用户观看电影的历史，得到这些电影的演员和导演集合 A，然后给用户推荐一个不属于集合 A 的导演和演员创作的电影，而用户表示非常满意，这样就实现了一个惊喜度很高的推荐。因此提高推荐惊喜度需要提高推荐结果的用户满意度，同时降低推荐结果和用户历史兴趣的相似度。</p>
+<p>新颖度和惊喜度的区别在，新颖度说的是没听过的物品，没听过的物品是有可能与用户的历史兴趣相似的，就没有了惊喜度。惊喜度可以说是新颖度的升级，因为没听过的物品中包含与历史兴趣相似的和不相似的物品。也许惊喜度的核心在于让用户无法理解推荐原因。</p>
+<h2 id=信任度>信任度</h2>
+<p>信任度是指用户对于推荐系统的信任程度，提高推荐系统的信任度主要有两种方法：</p>
+<ul>
+<li>需要增加推荐系统的透明度，而增加推荐系统透明度的主要办法是提供推荐解释。只有让用户了解推荐系统的运行机制，让用户认同推荐系统的运行机制，才会提高用户对推荐系统的信任度。</li>
+<li>考虑用户的社交网络信息，利用用户的好友信息给用户做推荐，并且用好友进行推荐解释。这是因为用户对他们的好友一般都比较信任，因此如果推荐的商品是好友购买过的，那么他们对推荐结果就会相对比较信任。</li>
+</ul>
+<p>但是其实很多情况下，对于一些很容易直观感受到推荐结果好坏的物品，比如音乐、短视频，信任度就不那么重要了。</p>
+<h2 id=实时性>实时性</h2>
+<p>在很多网站中，因为物品（新闻、微博等）具有很强的时效性，所以需要在物品还具有时效性时就将它们推荐给用户。比如，给用户推荐昨天的新闻显然不如给用户推荐今天的新闻。因此，在这些网站中，推荐系统的实时性就显得至关重要。</p>
+<p>推荐系统的实时性包括两个方面：</p>
+<ul>
+<li>推荐系统需要实时地更新推荐列表来满足用户新的行为变化。比如，当一个用户购买了 iPhone，如果推荐系统能够立即给他推荐相关配件，那么肯定比第二天再给用户推荐相关配件更有价值。很多推荐系统都会在离线状态每天计算一次用户推荐列表，然后于在线期间将推荐列表展示给用户。这种设计显然是无法满足实时性的。与用户行为相应的实时性，可以通过推荐列表的变化速率来评测。如果推荐列表在用户有行为后变化不大，或者没有变化，说明推荐系统的实时性不高。</li>
+<li>推荐系统需要能够将新加入系统的物品推荐给用户。这主要考验了推荐系统处理物品冷启动的能力。对于新物品推荐能力，我们可以利用用户推荐列表中有多大比例的物品是当天新加的来评测。</li>
+</ul>
+<h2 id=健壮性>健壮性</h2>
+<p>这里有点类似软件工程中的理论，健壮性就是指一个系统防止攻击（作弊）的能力。类似于搜索引擎，如果在推荐系统中能让自己的生产的信息成为热门推荐那将会带来巨大的利益，因此在设计推荐系统时应考虑到健壮性，通过模拟攻击等行为对其进行有效防范，确保在推荐上不会受到干扰。</p>
+<h2 id=商业目标>商业目标</h2>
+<p>推荐系统也是需要考虑自身商业目标的，很多时候推荐系统设计上也需要考虑到提高商业目标，但由于产品形态的不同，自身定义的商业指标也可能有所不同，比如说电子商务中利用推荐系统提高销售额，广告利用推荐系统投放用户感兴趣的广告进而提高点击率，流媒体网站利用推荐促使用户活跃度 & 互动提升等等。因此推荐系统除了满足用户、内容提供者的利益，也要利用推荐系统实现商业目标上的提升。</p>
+<h1 id=总结>总结</h1>
+<p>在上面我们提到了推荐系统的基本概念、用途、组成以及如何评价一个推荐系统是否足够好。所以也正是我们一直强调的推荐系统主要的目标是为了平衡三方的利益，能够让用户满意、内容提供者满意、能让推荐系统更好的改进发展。</p>
+<p>当然我们在利用上述指标进行评测时也要考虑到实际情况，比如我们的目标是什么、用户所处的物理环境、时间环境、物品或内容本身的属性等等，这也是在产品设计上经常提到的，要从实际具体的使用场景去评价一款产品或是一个算法的优缺点。</p>
+</div>
+<div class=post-copyright>
+<p class=copyright-item>
+<span class=item-title>Author</span>
+<span class=item-content>DY Wong</span>
+</p>
+<p class=copyright-item>
+<span class=item-title>LastMod</span>
+<span class=item-content>
+2019-07-18
+</span>
+</p>
+<p class=copyright-item>
+<span class=item-title>License</span>
+<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-nd/4.0/ target=_blank>CC BY-NC-ND 4.0</a></span>
+</p>
+</div>
+<footer class=post-footer>
+<div class=post-tags>
+<a href=https://fishxy.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/>推荐系统</a>
+<a href=https://fishxy.github.io/tags/learning/>learning</a>
+</div>
+<div class=social-share data-sites=weibo,wechat,douban,twitter data-mobile-sites=weibo,wechat></div>
+<nav class=post-nav>
+<a class=prev href=/post/backup/diary/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB/>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417l277.93508-310.326815c11.338233-12.190647 11.035334-32.285311-.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"/></svg>
+</i>
+<span class="prev-text nav-default">垃圾分类</span>
+<span class="prev-text nav-mobile">Prev</span>
+</a>
+<a class=next href=/post/backup/reading/okr%E5%B7%A5%E4%BD%9C%E6%B3%95%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/>
+<span class="next-text nav-default">《OKR工作法》阅读笔记</span>
+<span class="prev-text nav-mobile">Next</span>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697c-11.777231-11.500939-30.216186-10.304694-41.178865 2.712784z"/></svg>
+</i>
+</a>
+</nav>
+</footer>
+</article>
+</div>
+</div>
+</main>
+<footer id=footer class=footer>
+<div class=icon-links>
+<a href=https://fishxy.github.io/index.xml rel="noopener alternate" type=application/rss+xml class=iconfont title=rss target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><path d="M819.157333 1024C819.157333 574.592 449.408 204.8.0 204.8V0c561.706667.0 1024 462.293333 1024 1024H819.157333zM140.416 743.04a140.8 140.8.0 01140.501333 140.586667A140.928 140.928.0 01140.074667 1024C62.72 1024 0 961.109333.0 883.626667S62.933333 743.082667 140.416 743.04zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667v-199.04c372.352.0 678.784 306.517333 678.784 678.826667z"/></svg>
+</a>
+</div>
+<div class=copyright>
+<span class=power-by>
+Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a>
+</span>
+<span class=division>|</span>
+<span class=theme-info>
+Theme - <a class=theme-link href=https://github.com/xianmin/hugo-theme-jane>Jane</a>
+</span>
+<span class=copyright-year>
+&copy;
+2019 -
+2022
+<span class=heart>
+<i class=iconfont><svg class="icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14"><path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7.0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1.0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2.0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3.1-42.5-8-83.6-24-122.2z" fill="#8a8a8a"/></svg>
+</i>
+</span><span class=author>
+DY Wong
+</span></span>
+<span id=busuanzi_container>
+访客数/访问量：<span id=busuanzi_value_site_uv></span>/<span id=busuanzi_value_site_pv></span>
+</span>
+</div>
+</footer>
+<div class=back-to-top id=back-to-top>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><path d="M510.866688 227.694839 95.449397 629.218702h235.761562L329.15309 958.01517h362.40389L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777h894.052392v131.813095H63.840492V63.962777zm0 0"/></svg>
+</i>
+</div>
+</div>
+<script type=text/javascript src=/lib/jquery/jquery-3.2.1.min.js></script>
+<script type=text/javascript src=/lib/slideout/slideout-1.0.1.min.js></script>
+<script type=text/javascript src=/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin=anonymous></script>
+<script type=text/javascript>window.MathJax={showProcessingMessages:!1,messageStyle:'none'}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<script type=text/javascript src=/js/load-photoswipe.js></script>
+<script type=text/javascript src=/lib/photoswipe/photoswipe.min.js></script>
+<script type=text/javascript src=/lib/photoswipe/photoswipe-ui-default.min.js></script>
+<script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script>
+<script src=/js/custom.js></script>
+</body>
+</html>
