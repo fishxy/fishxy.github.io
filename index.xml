@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>一起摸鱼</title><link>https://fishxy.github.io/</link><description>Recent content on 一起摸鱼</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fishxy.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2022-01-01 新年快乐</title><link>https://fishxy.github.io/post/diary/2022-01-01%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2022-01-01%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</guid><description>&lt;p>新年快乐，留个复盘作业，立一下新年 flag 吧。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>一起摸鱼</title><link>https://fishxy.github.io/</link><description>Recent content on 一起摸鱼</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0700</lastBuildDate><atom:link href="https://fishxy.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>我测试一下notion cms</title><link>https://fishxy.github.io/post/testnotioncms/</link><pubDate>Wed, 09 Feb 2022 00:00:00 +0700</pubDate><guid>https://fishxy.github.io/post/testnotioncms/</guid><description>&lt;p>测试一下整个发布流程怎么样&lt;/p>
+&lt;h1 id="标题一">标题一&lt;/h1>
+&lt;h2 id="标题二">标题二&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="nx">测试一下代码片段&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>2022-01-01 新年快乐</title><link>https://fishxy.github.io/post/diary/2022-01-01%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/2022-01-01%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</guid><description>&lt;p>新年快乐，留个复盘作业，立一下新年 flag 吧。&lt;/p>
 &lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 考驾照&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 一周三次健身&lt;/li>
@@ -481,117 +492,4 @@ $$&lt;/p>
 &lt;li>项目制空档期的人员成本&lt;/li>
 &lt;/ul>
 &lt;p>项目 A 经过一段时间结束，在项目 B 开始之前人员处于没有项目的状态，由此产生的人员闲置又会增加企业的成本。&lt;/p>
-&lt;p>综上，我们能够看出企业服务市场中定制项目赚钱是很难的，所以供应商也会寻求对自己更有利的提高利润、减少成本的改革机会，比如进行 SaaS 转型——减少人员、部署、定制开发成本，进入细分领域——专精行业解决方案提高自身定价权，签订长期合作项目——保证项目盈利、市场稳定……&lt;/p></description></item><item><title>浅谈时间管理</title><link>https://fishxy.github.io/post/diary/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/diary/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</guid><description>&lt;p>时间管理是一个比较宽泛的话题，之前也有写过关于自己工作流程、生活中做事流程的文章，那篇里还是比较倾向于实际操作，行动，对于理论性、概念性的知识并没有进行阐述，所以既然说授人以鱼不如授人以渔，索性就简单讲一讲自己关于时间管理的理解，当然这里可能还是会涉及到自己工作、生活的实际场景。&lt;/p>
-&lt;p>谈到时间管理，我们先简单回答几个问题——什么是时间管理？为什么需要进行时间管理？最终希望达到什么目标？&lt;/p>
-&lt;h1 id="什么是时间管理">什么是时间管理&lt;/h1>
-&lt;p>时间管理就是有效的运用时间，降低变动性，运用技巧、技术和工具帮助我们完成工作、任务，实现目标。&lt;/p>
-&lt;h1 id="为什么要进行时间管理">为什么要进行时间管理&lt;/h1>
-&lt;p>这就要提到我们日常生活、工作中经常遇到的情况了，我们无论生活还是工作，事情主要的特点还是&lt;/p>
-&lt;ul>
-&lt;li>头绪多，琐碎事情多&lt;/li>
-&lt;li>需要依赖他人工作成果完成工作&lt;/li>
-&lt;li>要看住一些长远的、模糊的目标&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;p>那这也就意味着，我们会遇到很多问题，比如说：&lt;/p>
-&lt;ul>
-&lt;li>我们会面临大量碎片时间如何进行分配的问题&lt;/li>
-&lt;li>面临依赖他人以及被他人依赖的问题、也会有被人打断的风险&lt;/li>
-&lt;li>要主动推进一些目标，处理大量的&amp;quot;重要但不紧急&amp;quot;的任务&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;h1 id="最终希望达到的目标">最终希望达到的目标&lt;/h1>
-&lt;p>做好时间管理就是为了能够妥善的解决上述问题，同时也是为了能过够&lt;/p>
-&lt;ul>
-&lt;li>确保所有（有价值）的任务、工作能得到妥善的处理&lt;/li>
-&lt;li>确保“依赖他人”的任务也能顺利进行&lt;/li>
-&lt;li>确保协作中“衔接环节”耗时较少&lt;/li>
-&lt;li>确保能够有足够的时间去做“重要而不紧急”的事情&lt;/li>
-&lt;/ul>
-&lt;p>这也就是我们践行时间管理的目标，进而通过大量的练习和实践，能够提高我们对任务时间合理调度、带人带事顺利进行以及管理任何组织完成“重要而不紧急”工作的程度和能力，这也决定了我们未来的潜力和最终的高度。&lt;/p>
-&lt;p>（PS:重要而不紧急的事情举例——个人职业能力的提升和进阶、培养新人、行业知识的调研与积累等等……）&lt;/p>
-&lt;h1 id="怎么做">怎么做&lt;/h1>
-&lt;p>那最重要的，既然时间管理能带来这么些好处，那时间管理应该怎么做？——IOSR，即 Inbox、Organize、Schedule、Review&lt;/p>
-&lt;p>下面我具体展开来解释一下。&lt;/p>
-&lt;h2 id="inbox">Inbox&lt;/h2>
-&lt;p>inbox 即为收件箱，我们把需要收集的对象——可能是上网看到的一篇文章，可能是突然想到的 idea，可能是刚好别人交代的等等一系列的事情和信息汇总在 inbox 收集箱里，这里就有人会说了，接到任务或消息我自己脑子记下来就好了啊？为什么要提出一个 inbox 的概念呢？&lt;/p>
-&lt;p>这里要说明一下，inbox 的最主要的目的是将信息和线索汇总到同一个地方，借鉴公司里数据仓库的概念，我们利用 inbox 解耦数据的收集和处理过程。由于实际生活和工作中可能面临着很多的数据源输入，不同数据源（可能是个人的阅读、微信的聊天、邮件的通讯等）的更新频率可能也不同，如果分散精力多处关注的话会出问题，也就是会受到很多非直接相关因素的干扰，那利用 inbox 我们可以确保数据不会遗漏，减少对大脑精力的消耗，让做事更专注，同时也能批量处理问题。&lt;/p>
-&lt;h2 id="organize">Organize&lt;/h2>
-&lt;p>当我们在 inbox 中收集了大量的信息、待做的事情，下一步就是要整理收件箱的内容，计划这些事情应该如何去做了，最终目的是为了清空 inbox。那面对 inbox 中的内容，应该如何合理的安排呢？&lt;/p>
-&lt;p>对于 inbox 中收集的信息，比如说谋篇阅读、文章等等，或是某段话，如果是低价值的信息，经过过滤后可以直接删除，如果是高价值的信息，则可以选择进入知识库，以便于后续温习加深理解。&lt;/p>
-&lt;p>对于 inbox 中待做的事情，如果是 2 分钟(短时间)可以做完的，我们的原则是马上动手做，就地解决它；如果是 2 分钟做不完的事情，那就需要进入我们的执行系统、todolist 中。&lt;/p>
-&lt;h3 id="执行系统">执行系统&lt;/h3>
-&lt;p>一个好的执行系统应该包含项目 project 和 todo。项目 project 是用来组织所有工作，是区别于 todo，不是一个 todo 能完成的事情，每个项目 project 应当对应一个 todolist，也就是一系列的 todo 完成的。&lt;/p>
-&lt;p>而 todo 重点在于做（do），即应当是能够量化、能够明确具体行为的且可以执行的要做的事情。同时可以人为设定一个相对简单的阈值，比如说我们规定一个 todo 的工作量是 0.5~1 天内可以做完的，然后每天挑选若干 todo 来做，这样保证每天的 todo 不至于过多或过少。如果 todo 太长的话就会无法挑选每天要做的事情，这时候我们需要把这一个 todo 进行拆解，一个拆成多个，或是将 todo 直接转化成一个 project。&lt;/p>
-&lt;p>除此之外，建立一个 todo 关键的地方在于定义开始执行的时间，如果我们计划在哪天进行，就把这个 todo 放到那一天，这样在那天之前，我们都不会去关注它，从而使我们专注于当前的事情，不被干扰到。对于截止时间一般不用管，因为首先截止时间不像开始时间那么好控制，另外我们把 todo 拆解的足够小，只要开始就能很快按计划结束，这样的话截止时间的意义就不是很大了。&lt;/p>
-&lt;h3 id="eg-如果接到任务怎么办">e.g. 如果接到任务怎么办？&lt;/h3>
-&lt;p>接到任务，如果是需要自己做的，那就立即导入到自己的执行系统，确保事情统一管理，每天定时同步给自己。如果能够确定自己不会忘记这件事情，也可以选择不导入。&lt;/p>
-&lt;p>如果是需要团队成员做的事情，那就需要建立 todo，定期排查团队成员做事成果，主要可以在关键节点设置检查点、在最终设置检查点，确保最后工作完成的质量。&lt;/p>
-&lt;p>如果是依赖他人成果工作的，首先要确保有能够具体量化的可执行下一步行动——比如说调研对方工作成果、评估后续工作方向和工作量，同时设置多个检查点。如果是长期的合作项目，那就需要安排多个中间过程的检查点——比如说，利用私人关系打听一下对方目前进展、2~3 天经常问一下进度、要求 review 对方工作或是要求参与到对方验收过程等等。&lt;/p>
-&lt;p>最终我们的目的是能够清空 inbox，把 inbox 中的信息流向应该去的地方，同时按照计划完成执行系统中的任务。&lt;/p>
-&lt;h2 id="schedule">Schedule&lt;/h2>
-&lt;p>有了任务执行系统，有了一系列的 todo，下一步要觉得是今天要做什么。&lt;/p>
-&lt;p>&lt;code>EAT THAT FROG&lt;/code>&lt;/p>
-&lt;h3 id="action-list">Action list&lt;/h3>
-&lt;p>我们每天按照 frog 的重要程度，投入精力的程度，挑选 1~3 只 frog 进行解决，这些 frog 是最重要的、必须要完成的，也是最难的、需要精力旺盛且整块时间投入的任务。&lt;/p>
-&lt;p>再挑选 3~7 只蝌蚪，没那么重要的、拖一拖还能接受，且消耗精力比较小、可以在吃完 frog 的间隙或者碎片时间就完成的任务。&lt;/p>
-&lt;p>最终我们的目标是清理所有 frog 和清理一些蝌蚪，这里需要注意，如果蝌蚪（不紧急）长时间不处理，就会长成青蛙（紧急）。&lt;/p>
-&lt;h3 id="slice">Slice&lt;/h3>
-&lt;p>如果 frog 吃不下的时候，就需要拆解 frog(任务)，将 frog 拆解成一个个自己能够接受的，本质上要能有节奏的进行工作。&lt;/p>
-&lt;h3 id="time">Time&lt;/h3>
-&lt;p>预估工作的总时间，尝试着安排一天的工作量，确保 frog 总时间在 6 小时内，预留出工作的弹性时间，确保不会被精力下滑、临时有事打断。&lt;/p>
-&lt;h2 id="review">Review&lt;/h2>
-&lt;p>当我们按照上述步骤，完成了自己计划的各项任务后，合适的 review 可以帮助我们更好的确定下一步行动。这里需要说明的是，review 与复盘的区别，review 是定期的，是为了帮助我们寻找到下一步的行动，而复盘则是为了回顾之前的工作，寻找区别于过去的更好的解决方式。&lt;/p>
-&lt;p>对于不同的内容进行 review 的侧重点也是不同的。&lt;/p>
-&lt;p>&lt;strong>执行系统 project、todo&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>是否已经完成(完成的需要归档或者删掉)&lt;/li>
-&lt;li>是否有明确的下一步行动(重点是下一步)&lt;/li>
-&lt;li>是否需要调整计划&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>团队 team&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>团队成员的情绪、价值观问题&lt;/li>
-&lt;li>团队的整体目标同步、成长目标以及下一步达到目标的路径是否清晰&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>个人路径&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>个人成长是否需要新的行动&lt;/li>
-&lt;li>会有哪些风险点，需要进行调整计划&lt;/li>
-&lt;/ul>
-&lt;p>我们 review 的时机可以是 weekly、或者给自己设置一个循环的 todo 提醒进行复盘。&lt;/p>
-&lt;h1 id="小结">小结&lt;/h1>
-&lt;p>了解了上面的一些基本概念和思想，那落地起来就很容易了，这篇文章就不会再进行工具或者 App 的推荐了，只要大家找到适合自己的工具，构建适合自己的工作流程，按照收集、组织、计划、执行、回顾一系列步骤多练习几次就可以找到适合自己的节奏了。&lt;/p>
-&lt;p>最后还有几个关于时间管理的问题进行澄清一下：&lt;/p>
-&lt;p>Q1：时间管理能让我轻松么？&lt;/p>
-&lt;ul>
-&lt;li>能，减少心理负担，降低心理压力&lt;/li>
-&lt;li>不能，要做的事情不会减少，只是被你整理过了&lt;/li>
-&lt;/ul>
-&lt;p>Q2：我觉得有很多事情没有时间做&lt;/p>
-&lt;ul>
-&lt;li>可能性 1：时间利用不够充分，需要加强时间管理能力，了解自己的做事节奏，按自己的节奏掌控自己要做的事情&lt;/li>
-&lt;li>可能性 2：事情就是单纯的多，不可能做完，那如何解决
-&lt;ul>
-&lt;li>断舍离，选择真正有价值的，重要程度高的事情去做&lt;/li>
-&lt;li>培养、授权，将事情分派给别人去做，团队的力量是巨大的&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Q3：时间管理的本质是？&lt;/p>
-&lt;ul>
-&lt;li>提高你单位时间的价值
-&lt;ul>
-&lt;li>不会让你做的更快，而是让你做更有价值的事情&lt;/li>
-&lt;li>充分利用碎片时间解决碎片问题&lt;/li>
-&lt;li>提高自己的&amp;quot;精力投入回报率&amp;quot;&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>有意识的放弃
-&lt;ul>
-&lt;li>放弃某些不用做的&lt;/li>
-&lt;li>放弃某些不用自己做的&lt;/li>
-&lt;li>放弃自己的舒适区&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>综上，我们能够看出企业服务市场中定制项目赚钱是很难的，所以供应商也会寻求对自己更有利的提高利润、减少成本的改革机会，比如进行 SaaS 转型——减少人员、部署、定制开发成本，进入细分领域——专精行业解决方案提高自身定价权，签订长期合作项目——保证项目盈利、市场稳定……&lt;/p></description></item></channel></rss>
