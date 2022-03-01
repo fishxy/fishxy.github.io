@@ -431,11 +431,11 @@ $$&lt;/p>
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">1.首先打开按住左侧电源键 1s 以上打开 niz 键盘，f12 的蓝牙电源等会有提示
-2.按住 fn+f9~11 任意一个知道指示灯快闪进入配对模式
-3.连接设备上搜索设备 “Bluetooth keyboard”，点击连接会出现连接密码
-4.在键盘上输入对应连接密码，回车键，done！
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">1.首先打开按住左侧电源键 1s 以上打开 niz 键盘，f12 的蓝牙电源等会有提示
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2.按住 fn+f9~11 任意一个知道指示灯快闪进入配对模式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3.连接设备上搜索设备 “Bluetooth keyboard”，点击连接会出现连接密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4.在键盘上输入对应连接密码，回车键，done！
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>由于我没有仔细看电脑上的提示，所以在出现链接密码的时候没有在键盘上输入，我就跟电脑相看两不厌的待了几分钟，直到我意识到问题。&lt;/p>
 &lt;h2 id="更换键帽">更换键帽&lt;/h2>
