@@ -247,9 +247,196 @@ CEO 是传统行业的从业者，我们经常存在一些关于同一个词的�
 &lt;p>这就要说下垃圾分类前后的变化了，在施行垃圾分类之前，垃圾运输通常都是定期来一辆垃圾车，不分种类统统将所有的垃圾都倒入车内，然后运输到垃圾集中点、垃圾场去，这是的垃圾混杂着各种类型的，垃圾处理厂不会直接进行处理，而是任由附近的居民、收废品的人会去里面“淘宝”，然后再将淘到的废品出价卖给垃圾处理厂，这里我们能发现，在原来的模式下其实垃圾也是进行分类的，但是将分拣工作是放到了回收工作后，利用“众包”的模式进行有偿的垃圾分拣。&lt;/p>
 &lt;p>那在施行垃圾分类后是怎么做的呢？垃圾分类这个环节就不再说明了，我们能够台湾在执行垃圾分类后，回收是有专门的垃圾车进行回收，每天在固定的时间沿固定路线收垃圾，清洁人员也要确认无误后才可以丢上垃圾车。虽然是在回收前节省了后续“众包”环节的分拣操作，但实际上由于分类回收，增加了运输车辆、人力成本，从而大大增加了运输成本，一辆车过来只能收走其中一类垃圾，其他类别只能等下一趟来收。而且如果民众错过了某一时间的特定种类垃圾回收，就只能抱着垃圾等下一趟了。&lt;/p>
 &lt;p>当然实际上我和同事的想法更离谱，我们还准备去找马斯克拉融资，先借几个火箭，打算把垃圾运输到外太空其他星球上去，从而确保地球是干净的 😂，这听起来就跟发达国家把垃圾丢到其他国家的性质一样。&lt;/p>
-&lt;p>简而言之，垃圾肯定不能乱扔的，但是究竟怎么能低成本的回收分拣、高质量高效率的处理才是问题，而不是盲目的学习人家的东西，病急乱投医(txtx，溜了溜了，我去拉融资借火箭去了。&lt;/p></description></item><item><title>推荐系统学习</title><link>https://fishxy.github.io/post/backup/reading/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/</link><pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/backup/reading/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid><description>&lt;div class="douban_show">
-&lt;div id="db9787115281586" date-dbid="9787115281586" class="douban_item post-preview">&lt;/div>
+&lt;p>简而言之，垃圾肯定不能乱扔的，但是究竟怎么能低成本的回收分拣、高质量高效率的处理才是问题，而不是盲目的学习人家的东西，病急乱投医(txtx，溜了溜了，我去拉融资借火箭去了。&lt;/p></description></item><item><title>推荐系统学习</title><link>https://fishxy.github.io/post/backup/reading/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/</link><pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/backup/reading/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid><description>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+&lt;head>
+&lt;title>&lt;/title>
+&lt;style>
+.post-preview {
+max-width: 780px;
+height: 200px;
+margin: 1em auto;
+position: relative;
+display: flex;
+background: var(--entry);
+border-radius: 15px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, .25), 0 0 2px rgba(0, 0, 0, .25);
+}
+.dark .post-preview {
+background: var(--entry);
+box-shadow: 0 2px 4px rgba(0, 0, 0, .5), 0 0 2px rgba(0, 0, 0, .5);
+}
+.post-preview--meta {
+width: 80%;
+padding: 23px;
+overflow: hidden;
+}
+.post-preview--middle {
+line-height: 28px;
+}
+.post-preview--title {
+font-size: 22px;
+margin: 0 !important;
+}
+.post-preview--title a {
+text-decoration: none;
+}
+.post-preview--date {
+font-size: 14px;
+color: #999;
+}
+.post-preview--excerpt {
+font-size: 14px;
+line-height: 1.825;
+}
+.post-preview--excerpt p {
+display: inline;
+margin: 0;
+}
+.post-preview--image {
+height: 200px !important;
+width: 25%;
+float: right;
+border-radius: 0 15px 15px 0;
+}
+.post-preview img {
+margin: unset;
+width: 20%;
+border-radius: 0 15px 15px 0;
+}
+@media (max-width: 550px) {
+.post-preview {
+width: 95%;
+}
+.post-preview--excerpt {
+}
+.post-preview--middle {
+line-height: 19px;
+}
+.post-preview--meta {
+width: 60%;
+padding: 23px;
+overflow: hidden;
+}
+.post-preview img {
+margin: unset;
+width: 40%;
+border-radius: 0 15px 15px 0;
+}
+}
+.rating {
+display: block;
+line-height: 15px;
+}
+.rating-star {
+display: inline-block;
+width: 75px;
+height: 15px;
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);
+overflow: hidden;
+}
+.allstar10 {
+background-position: 0px 0px;
+}
+.allstar9 {
+background-position: 0px -15px;
+}
+.allstar8 {
+background-position: 0px -30px;
+}
+.allstar7 {
+background-position: 0px -45px;
+}
+.allstar6 {
+background-position: 0px -60px;
+}
+.allstar5 {
+background-position: 0px -75px;
+}
+.allstar4 {
+background-position: 0px -90px;
+}
+.allstar3 {
+background-position: 0px -105px;
+}
+.allstar2 {
+background-position: 0px -120px;
+}
+.allstar1 {
+background-position: 0px -135px;
+}
+.allstar0 {
+background-position: 0px -150px;
+}
+.rating-average {
+color: #777;
+display: inline-block;
+font-size: 13px;
+margin-left: 10px;
+}
+&lt;/style>
+&lt;script src="https://code.jquery.com/jquery-1.12.4.min.js">&lt;/script>
+&lt;script type="text/javascript">
+$(document).ready(function () {
+$('.douban_item').each(function () {
+var _this = $(this);
+var strs = _this.attr('urlstring').toString();
+var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+if (db_reg.test(strs)) {
+var db_type = strs.replace(db_reg, "$1");
+var db_id = strs.replace(db_reg, "$2").toString();
+var db_api = "https://douban.edui.fun/";
+if (db_type === 'movie') {
+var ls_item = 'movie' + db_id;
+var url = db_api + "movies/" + db_id;
+if (localStorage.getItem(ls_item) == null || localStorage.getItem(ls_item) === 'undefined') {
+$.ajax({
+url: url, type: 'GET', dataType: "json", success: function (data) {
+localStorage.setItem(ls_item, JSON.stringify(data));
+movieShow(_this, ls_item, strs)
+}
+})
+} else {
+movieShow(_this, ls_item, strs)
+}
+} else if (db_type === 'book') {
+var ls_item = 'book' + db_id;
+var url = db_api + "v2/book/id/" + db_id;
+if (localStorage.getItem(ls_item) == null || localStorage.getItem(ls_item) === 'undefined') {
+$.ajax({
+url: url, type: 'GET', dataType: 'json', success: function (data) {
+localStorage.setItem('book' + db_id, JSON.stringify(data));
+bookShow(_this, ls_item, strs)
+}
+})
+} else {
+bookShow(_this, ls_item, strs)
+}
+}
+}
+});
+});
+function movieShow(_this, ls_item, str) {
+var storage = localStorage.getItem(ls_item);
+var data = JSON.parse(storage);
+var db_star = Math.ceil(data.rating);
+$("&lt;div class='post-preview'>&lt;div class='post-preview--meta'>&lt;div class='post-preview--middle'>&lt;div class='post-preview--title'>&lt;a target='_blank' style='box-shadow: none; font-weight: bolder;' href='" + str + "'>" + data.name + "&lt;/a>&lt;/div>&lt;div class='rating'>&lt;div class='rating-star allstar" + db_star + "'>&lt;/div>&lt;div class='rating-average'>" + data.rating + "&lt;/div>&lt;/div>&lt;time class='post-preview--date'>导演：" + data.director + " / 类型：" + data.genre + " / " + data.year + "&lt;/time>&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro.replace(/\s*/g, "") + "&lt;/section>&lt;/div>&lt;/div>&lt;img referrerpolicy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.img + ">&lt;/div>").replaceAll(_this)
+}
+function bookShow(_this, ls_item, str) {
+var storage = localStorage.getItem(ls_item);
+var data = JSON.parse(storage);
+var db_star = Math.ceil(data.rating.average);
+$("&lt;div class='post-preview'>&lt;div class='post-preview--meta'>&lt;div class='post-preview--middle'>&lt;div class='post-preview--title'>&lt;a target='_blank' style='box-shadow: none; font-weight: bolder;' href='" + str + "'>" + data.title + "&lt;/a>&lt;/div>&lt;div class='rating'>&lt;div class='rating-star allstar" + db_star + "'>&lt;/div>&lt;div class='rating-average'>" + data.rating.average + "&lt;/div>&lt;/div>&lt;time class='post-preview--date'>作者：" + data.author + " / 出版："+ data.pubdate +" / "+ data.publisher +" &lt;/time>&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.summary.replace(/\s*/g, "") + "&lt;/section>&lt;/div>&lt;/div>&lt;img referrerpolicy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.images.medium + ">&lt;/div>").replaceAll(_this)
+}
+&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;div class="douban_show">
+&lt;div id="db" urlstring="" class="douban_item post-preview">&lt;/div>
 &lt;/div>
+&lt;/body>
+&lt;/html>
 &lt;p>文章主要是想对推荐系统涉及的基础概念和常见的使用场景进行简单介绍，并罗列一些推荐系统的基本算法，由于作者本身并不从事程序开发工作，所以对于深层次的技术探讨上涉及较少，希望通过自己阅读书籍和收集整理其他文章的内容对推荐系统进行一个简单的梳理，也希望能够通过此文帮助大家更容易的理解推荐系统。&lt;/p>
 &lt;h1 id="推荐系统是什么">推荐系统是什么&lt;/h1>
 &lt;p>一句话来说，推荐系统就是根据&lt;strong>用户的历史行为、用户属性、社交关系、所处的环境以及上下文&lt;/strong>等等信息去判断满足用户&lt;strong>需要或是感兴趣&lt;/strong>的内容的一类服务/应用。&lt;/p>
@@ -398,9 +585,196 @@ $$&lt;/p>
 &lt;p>推荐系统也是需要考虑自身商业目标的，很多时候推荐系统设计上也需要考虑到提高商业目标，但由于产品形态的不同，自身定义的商业指标也可能有所不同，比如说电子商务中利用推荐系统提高销售额，广告利用推荐系统投放用户感兴趣的广告进而提高点击率，流媒体网站利用推荐促使用户活跃度 &amp;amp; 互动提升等等。因此推荐系统除了满足用户、内容提供者的利益，也要利用推荐系统实现商业目标上的提升。&lt;/p>
 &lt;h1 id="总结">总结&lt;/h1>
 &lt;p>在上面我们提到了推荐系统的基本概念、用途、组成以及如何评价一个推荐系统是否足够好。所以也正是我们一直强调的推荐系统主要的目标是为了平衡三方的利益，能够让用户满意、内容提供者满意、能让推荐系统更好的改进发展。&lt;/p>
-&lt;p>当然我们在利用上述指标进行评测时也要考虑到实际情况，比如我们的目标是什么、用户所处的物理环境、时间环境、物品或内容本身的属性等等，这也是在产品设计上经常提到的，要从实际具体的使用场景去评价一款产品或是一个算法的优缺点。&lt;/p></description></item><item><title>《OKR工作法》阅读笔记</title><link>https://fishxy.github.io/post/backup/reading/okr%E5%B7%A5%E4%BD%9C%E6%B3%95%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/backup/reading/okr%E5%B7%A5%E4%BD%9C%E6%B3%95%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</guid><description>&lt;div class="douban_show">
-&lt;div id="db9787508679099" date-dbid="9787508679099" class="douban_item post-preview">&lt;/div>
+&lt;p>当然我们在利用上述指标进行评测时也要考虑到实际情况，比如我们的目标是什么、用户所处的物理环境、时间环境、物品或内容本身的属性等等，这也是在产品设计上经常提到的，要从实际具体的使用场景去评价一款产品或是一个算法的优缺点。&lt;/p></description></item><item><title>《OKR工作法》阅读笔记</title><link>https://fishxy.github.io/post/backup/reading/okr%E5%B7%A5%E4%BD%9C%E6%B3%95%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://fishxy.github.io/post/backup/reading/okr%E5%B7%A5%E4%BD%9C%E6%B3%95%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</guid><description>&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+&lt;head>
+&lt;title>&lt;/title>
+&lt;style>
+.post-preview {
+max-width: 780px;
+height: 200px;
+margin: 1em auto;
+position: relative;
+display: flex;
+background: var(--entry);
+border-radius: 15px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, .25), 0 0 2px rgba(0, 0, 0, .25);
+}
+.dark .post-preview {
+background: var(--entry);
+box-shadow: 0 2px 4px rgba(0, 0, 0, .5), 0 0 2px rgba(0, 0, 0, .5);
+}
+.post-preview--meta {
+width: 80%;
+padding: 23px;
+overflow: hidden;
+}
+.post-preview--middle {
+line-height: 28px;
+}
+.post-preview--title {
+font-size: 22px;
+margin: 0 !important;
+}
+.post-preview--title a {
+text-decoration: none;
+}
+.post-preview--date {
+font-size: 14px;
+color: #999;
+}
+.post-preview--excerpt {
+font-size: 14px;
+line-height: 1.825;
+}
+.post-preview--excerpt p {
+display: inline;
+margin: 0;
+}
+.post-preview--image {
+height: 200px !important;
+width: 25%;
+float: right;
+border-radius: 0 15px 15px 0;
+}
+.post-preview img {
+margin: unset;
+width: 20%;
+border-radius: 0 15px 15px 0;
+}
+@media (max-width: 550px) {
+.post-preview {
+width: 95%;
+}
+.post-preview--excerpt {
+}
+.post-preview--middle {
+line-height: 19px;
+}
+.post-preview--meta {
+width: 60%;
+padding: 23px;
+overflow: hidden;
+}
+.post-preview img {
+margin: unset;
+width: 40%;
+border-radius: 0 15px 15px 0;
+}
+}
+.rating {
+display: block;
+line-height: 15px;
+}
+.rating-star {
+display: inline-block;
+width: 75px;
+height: 15px;
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);
+overflow: hidden;
+}
+.allstar10 {
+background-position: 0px 0px;
+}
+.allstar9 {
+background-position: 0px -15px;
+}
+.allstar8 {
+background-position: 0px -30px;
+}
+.allstar7 {
+background-position: 0px -45px;
+}
+.allstar6 {
+background-position: 0px -60px;
+}
+.allstar5 {
+background-position: 0px -75px;
+}
+.allstar4 {
+background-position: 0px -90px;
+}
+.allstar3 {
+background-position: 0px -105px;
+}
+.allstar2 {
+background-position: 0px -120px;
+}
+.allstar1 {
+background-position: 0px -135px;
+}
+.allstar0 {
+background-position: 0px -150px;
+}
+.rating-average {
+color: #777;
+display: inline-block;
+font-size: 13px;
+margin-left: 10px;
+}
+&lt;/style>
+&lt;script src="https://code.jquery.com/jquery-1.12.4.min.js">&lt;/script>
+&lt;script type="text/javascript">
+$(document).ready(function () {
+$('.douban_item').each(function () {
+var _this = $(this);
+var strs = _this.attr('urlstring').toString();
+var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+if (db_reg.test(strs)) {
+var db_type = strs.replace(db_reg, "$1");
+var db_id = strs.replace(db_reg, "$2").toString();
+var db_api = "https://douban.edui.fun/";
+if (db_type === 'movie') {
+var ls_item = 'movie' + db_id;
+var url = db_api + "movies/" + db_id;
+if (localStorage.getItem(ls_item) == null || localStorage.getItem(ls_item) === 'undefined') {
+$.ajax({
+url: url, type: 'GET', dataType: "json", success: function (data) {
+localStorage.setItem(ls_item, JSON.stringify(data));
+movieShow(_this, ls_item, strs)
+}
+})
+} else {
+movieShow(_this, ls_item, strs)
+}
+} else if (db_type === 'book') {
+var ls_item = 'book' + db_id;
+var url = db_api + "v2/book/id/" + db_id;
+if (localStorage.getItem(ls_item) == null || localStorage.getItem(ls_item) === 'undefined') {
+$.ajax({
+url: url, type: 'GET', dataType: 'json', success: function (data) {
+localStorage.setItem('book' + db_id, JSON.stringify(data));
+bookShow(_this, ls_item, strs)
+}
+})
+} else {
+bookShow(_this, ls_item, strs)
+}
+}
+}
+});
+});
+function movieShow(_this, ls_item, str) {
+var storage = localStorage.getItem(ls_item);
+var data = JSON.parse(storage);
+var db_star = Math.ceil(data.rating);
+$("&lt;div class='post-preview'>&lt;div class='post-preview--meta'>&lt;div class='post-preview--middle'>&lt;div class='post-preview--title'>&lt;a target='_blank' style='box-shadow: none; font-weight: bolder;' href='" + str + "'>" + data.name + "&lt;/a>&lt;/div>&lt;div class='rating'>&lt;div class='rating-star allstar" + db_star + "'>&lt;/div>&lt;div class='rating-average'>" + data.rating + "&lt;/div>&lt;/div>&lt;time class='post-preview--date'>导演：" + data.director + " / 类型：" + data.genre + " / " + data.year + "&lt;/time>&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro.replace(/\s*/g, "") + "&lt;/section>&lt;/div>&lt;/div>&lt;img referrerpolicy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.img + ">&lt;/div>").replaceAll(_this)
+}
+function bookShow(_this, ls_item, str) {
+var storage = localStorage.getItem(ls_item);
+var data = JSON.parse(storage);
+var db_star = Math.ceil(data.rating.average);
+$("&lt;div class='post-preview'>&lt;div class='post-preview--meta'>&lt;div class='post-preview--middle'>&lt;div class='post-preview--title'>&lt;a target='_blank' style='box-shadow: none; font-weight: bolder;' href='" + str + "'>" + data.title + "&lt;/a>&lt;/div>&lt;div class='rating'>&lt;div class='rating-star allstar" + db_star + "'>&lt;/div>&lt;div class='rating-average'>" + data.rating.average + "&lt;/div>&lt;/div>&lt;time class='post-preview--date'>作者：" + data.author + " / 出版："+ data.pubdate +" / "+ data.publisher +" &lt;/time>&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.summary.replace(/\s*/g, "") + "&lt;/section>&lt;/div>&lt;/div>&lt;img referrerpolicy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.images.medium + ">&lt;/div>").replaceAll(_this)
+}
+&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;div class="douban_show">
+&lt;div id="db" urlstring="" class="douban_item post-preview">&lt;/div>
 &lt;/div>
+&lt;/body>
+&lt;/html>
 &lt;p>这两天看完了《OKR 工作法》，书籍本身篇幅比较小，但是内容主题要靠两天消化还是不容易的。主要内容还是讲解了 OKR 工作法的基本概念，然后利用一个创业公司的故事来讲解实践 OKR 过程中可能会出现的问题，以及如何正确理解运用 OKR 和 OKR 给企业带来的好处。&lt;/p>
 &lt;p>&lt;code>OKR：Objectives and Key Results 即目标与关键成果法，主要是用于跟踪目标以及其完成情况的一种工具和管理方法。&lt;/code>&lt;/p>
 &lt;p>OKR 的基本概念这里就不在赘述了，比较好理解，它背后的思路也是比较简单的 —— 保持清醒，关注真正的目标，定期（周）进行 review。通读此书，我比较认同 OKR 中的几点：&lt;/p>
